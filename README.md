@@ -1,2 +1,2 @@
-# myFreshStart
- a career starter path.
+# My fresh start!
+ a career starter pack.
