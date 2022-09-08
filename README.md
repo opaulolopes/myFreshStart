@@ -1,2 +1,2 @@
 # My fresh start!
- a career starter pack.
+ a career starter path.
