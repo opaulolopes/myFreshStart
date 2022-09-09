@@ -1,5 +1,5 @@
 # My fresh start!
- a career starter path.
+ a career starter pack.
  
 ---
  A seguir, será apresentada a linguagem Markdown. Existe um [Manual do Markdown para GitHub](https://github.com/gustavoguanabara/git-github/blob/master/manuais-PDF/guia-markdown.pdf).
