@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+* {
+    box-sizing : border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #3BD37F, #1A5C38);
+    font-weight: bold;
+}
+
+header>h1, header>p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    text-indent: 0em;
+    text-align: center;
+    width: 550px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+nav {
+    text-align: left;
+    padding: 25px 0px 10px 20px;
+}
+
+a.menu {
+    background-color: #c5ebd600;
+    color: #84E1AD;
+    text-decoration: none;
+    margin-right: 2em;
+    padding: 10px;
+}
+
+a.menu:hover {
+    background-color: #239656;
+    border-radius: 8px;
+}
+
+main {
+    background-color: #84E1AD;
+}
+
+article {
+    background-color: white;
+    width: 1040px;
+    margin: auto;
+    padding: 20px;
+}
+
+@font-face {
+    font-family: droid;
+    src: url(fontes/idroid.otf);
+}
+
+h1 {
+    color: #1A5C38;
+    font-family: droid;
+    margin: auto;
+}
+
+h2 {
+    background-image: linear-gradient(to right, #C5EBD6, white);
+    color: #1A5C38;
+    font-family: droid;
+    font-size: 1.3em;
+    padding-left: 10px;
+}
+
+p {
+    text-align: justify;
+    line-height: 2em;
+    text-indent: 2em;
+}
+
+a {
+    background-color: #C5EBD6;
+    color: #1A5C38;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+strong {
+    color: #1A5C38;
+    font-weight: bold;
+}
+
+aside {
+    background-color: #C5EBD6;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+aside>h3 {
+    background-color: #1A5C38;
+    color: white;
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+}
+
+aside>p {
+    padding: 0px 10px;
+}
+
+ul {
+    columns: 2;
+}
+
+footer>p {
+    background-color: #1A5C38;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+footer>p>strong {
+    color: white;
+}
