@@ -1,0 +1,80 @@
+1. Escreva um programa JavaScript que aceite dois inteiros e exiba o maior.
+------------------------------------------------------------------------------------------------------------------------
+2. Escreva uma instrução condicional JavaScript para encontrar o sinal do produto de três números. Exiba uma caixa de alerta com o sinal especificado. 
+EX: Números de amostra : 3, -7, 2
+Saída : O sinal é -
+------------------------------------------------------------------------------------------------------------------------
+3.Escreva uma instrução condicional JavaScript para encontrar o maior de cinco números. Exiba uma caixa de alerta para mostrar o resultado. 
+EX: Números de amostra : -5, -2, -6, 0, -1
+Saída : 0
+------------------------------------------------------------------------------------------------------------------------
+4.Escreva um loop JavaScript for que irá iterar de 0 a 15. Para cada iteração, ele verificará se o número atual é par ou ímpar e exibirá uma mensagem na tela. Vá para o editor
+Exemplo de saída:
+"0 é par"
+"1 é ímpar"
+"2 é par"
+------------------------------------------------------------------------------------------------------------------------
+5.Escreva um programa JavaScript que itere os inteiros de 1 a 100. Mas para múltiplos de três imprima "Fizz" em vez do número e para os múltiplos de cinco imprima "Buzz". Para números que são múltiplos de três e cinco, imprima "FizzBuzz".
+------------------------------------------------------------------------------------------------------------------------
+6.De acordo com a Wikipedia, um número feliz é definido pelo seguinte processo:
+"Começando com qualquer número inteiro positivo, substitua o número pela soma dos quadrados de seus dígitos e repita o processo até que o número seja igual a 1 (onde ficará) , ou faz um loop infinito em um ciclo que não inclui 1. Aqueles números para os quais esse processo termina em 1 são números felizes, enquanto aqueles que não terminam em 1 são números infelizes (ou números tristes)".
+Escreva um programa JavaScript para encontrar e imprimir os 5 primeiros números felizes.
+------------------------------------------------------------------------------------------------------------------------
+7.Escreva um programa JavaScript para encontrar os números Armstrong de 3 dígitos.  Nota: Um número Armstrong de três dígitos é um número inteiro tal que a soma dos cubos de seus dígitos é igual ao próprio número. Por exemplo, 371 é um número Armstrong desde 3**3 + 7**3 + 1**3 = 371.
+------------------------------------------------------------------------------------------------------------------------
+8.Escreva um programa JavaScript para construir o padrão a seguir, usando um loop for aninhado. 
+*  
+* *  
+* * *  
+* * * *  
+* * * * *
+------------------------------------------------------------------------------------------------------------------------
+9.Escreva um programa JavaScript para calcular o máximo divisor comum (GCD) de dois inteiros positivos
+------------------------------------------------------------------------------------------------------------------------
+10.Escreva um programa JavaScript para somar os múltiplos de 3 e 5 abaixo de 1000.
+------------------------------------------------------------------------------------------------------------------------
+11. Escreva uma função JavaScript para verificar se uma `entrada` é um array ou não.
+------------------------------------------------------------------------------------------------------------------------
+12.Escreva uma função JavaScript para clonar um array.
+Dados de Teste :
+array_Clone([1, 2, 4, 0]);
+array_Clone([1, 2, [4, 0]]);
+------------------------------------------------------------------------------------------------------------------------
+13. Escreva uma função JavaScript para obter o primeiro elemento de um array. Passar um parâmetro 'n' retornará os primeiros 'n' elementos do array.
+de dados de teste :
+console.log(first([7, 9, 0, -2]));
+console.log(first([],3));
+console.log(first([7, 9, 0, -2],3));
+console.log(first([7, 9, 0, -2],6));
+console.log(first([7, 9, 0, -2],-3));
+Saída esperada :
+7
+[]
+[7, 9, 0]
+[7, 9, 0, -2]
+[]
+------------------------------------------------------------------------------------------------------------------------
+14.Escreva um programa JavaScript que aceite um número como entrada e insira traços (-) entre cada dois números pares. Por exemplo, se você aceitar 025468, a saída deve ser 0-254-6-8.
+------------------------------------------------------------------------------------------------------------------------
+15.Escreva um programa JavaScript para localizar o item mais frequente de um array.
+amostra : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+Saída da amostra : a (5 vezes)
+------------------------------------------------------------------------------------------------------------------------
+16.Escreva uma função JavaScript para verificar se uma `entrada` é uma string ou não. Vá para o editor
+de dados de teste :
+console.log(is_string('w3resource'));
+true
+console.log(is_string([1, 2, 4, 0]));
+false
+------------------------------------------------------------------------------------------------------------------------
+ 17.Escreva uma função JavaScript para verificar se uma string está em branco ou não. Vá para o editor
+dados de teste :
+console.log(is_Blank(''));
+console.log(is_Blank('abc'));
+true
+false
+------------------------------------------------------------------------------------------------------------------------
+18.Escreva uma função JavaScript para dividir uma string e convertê-la em um array de palavras.
+dados de teste: 
+console.log(string_to_array("Robin Singh"));
+["Robin", "Singh"]
