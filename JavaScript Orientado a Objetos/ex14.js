@@ -1,8 +1,13 @@
-var num = 025468;
+var input = '025468';
+var output = '';
 
-indexOf
-
-
-console.log(num)
-
-// Escreva um programa JavaScript que aceite um número como entrada e insira traços (-) entre cada dois números pares. Por exemplo, se você aceitar 025468, a saída deve ser 0-254-6-8.
+for (c = 0; c < input.length; c++) {
+    currentDigit = Number(input.charAt(c))
+    nextDigit = Number(input.charAt(c + 1))
+    if (currentDigit % 2 == 0 && nextDigit % 2 == 0) {
+        output += currentDigit + '-'
+    } else {
+        output += currentDigit
+    }
+}
+console.log(output)
