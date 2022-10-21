@@ -1,14 +1,27 @@
-// De acordo com a Wikipedia, um número feliz é definido pelo seguinte processo:
-// "Começando com qualquer número inteiro positivo, substitua o número pela soma dos quadrados de seus dígitos e repita o processo até que o número seja igual a 1 (onde ficará) , ou faz um loop infinito em um ciclo que não inclui 1. Aqueles números para os quais esse processo termina em 1 são números felizes, enquanto aqueles que não terminam em 1 são números infelizes (ou números tristes)".
-// Escreva um programa JavaScript para encontrar e imprimir os 5 primeiros números felizes.
-function getSum(num) {
-    let sum = 0;
-    while (num != 0) {
-        sum = sum + num % 10;
-        num = parseInt(num / 10);
+function happy_number(num) {
+    var remainderSquare, remainderPart;
+    var c = [];
+
+    while (num != 1 && c[num] !== true) {
+        c[num] = true;
+        while (num > 0) {
+            remainderPart = num % 10;
+            remainderSquare = remainderPart ** 2;
+            num = (num - remainderPart) / 10;
+        }
+        num = remainderSquare;
     }
-    return sum;
+    return (num == 1);
 }
 
-for (num = 1; num <= 10; num++)
-    console.log(getSum(num))
+var num = 1;
+var counter = 5;
+var first5 = '';
+while (counter-- > 0) {
+    while (!happy_number(num))
+        num++;
+    first5 += (" " + num);
+
+    num++;
+}
+console.log('First 5 happy numbers are' + first5);
