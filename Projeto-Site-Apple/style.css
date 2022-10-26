@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'San Francisco';
+    src: url('fonts/SF-Pro-Regular.otf') format('opentype'),
+    url('fonts/SF-Pro-Medium.otf') format('opentype'),
+    url('fonts/SF-Pro-Semibold.otf') format('opentype'),
+    url('fonts/SF-Pro-Bold.otf') format('opentype');
+  }
+
+/* GENERAL STYLESHEETS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'San Francisco', Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: #000000CC;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* HEADER > NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+nav a {
+    color: #bbb;
+    font-size: 9.3pt;
+    letter-spacing: .2pt;
+    text-decoration: none;
+    padding: 14.5px 8.1px;
+    margin: 0 14px;
+}
+
+.apple-icon {
+    opacity: .85;
+    background-image: url('images/apple-icon.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 14px 44px;
+    width: 30px;
+}
+
+.search-icon {
+    opacity: .85;
+    background-image: url('images/search-icon.svg');
+    background-position: 8px 0;
+    background-repeat: no-repeat;
+    background-size: 15px 88px;
+    width: 30px;
+}
+
+.store-icon {
+    opacity: .85;
+    background-image: url('images/store-icon.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 14px 44px;
+    width: 30px;
+}
+
+/* GENERAL MAIN > FIRST CONTENT */
+.homepage-first-content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 12px;
+    margin-bottom: 12px;
+}
+
+.content-box {
+    position: relative;
+    height: 692px;
+    background-position: center -44px;
+}
+
+.content-box>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.content-box-wrapper {
+    position: relative;
+    text-align: center;
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 42pt;
+    letter-spacing: .7pt;
+}
+
+h2 {
+    font-size: 21pt;
+    font-weight: normal;
+    margin-bottom: 11pt;
+}
+
+h3 {
+    font-size: 16pt;
+    font-weight: normal;
+    margin-bottom: 13pt;
+}
+
+.links>a {
+    font-size: 16pt;
+    text-decoration: none;
+    pointer-events: all;
+}
+
+.links>a:not(:first-child) {
+    margin-left: 35px;
+}
+
+.links>a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN > FIRST CONTENT > iPAD */
+.content-box.one {
+    background-image: url(images/ipad.jpg);
+}
+
+.content-box-wrapper.one {
+    width: 350px;
+    height: 200px;
+    transform: translate(274%, 122.1%);
+}
+
+.content-box-wrapper.one>h1, .content-box-wrapper.one>h2 {
+    color: #1d1d1f;
+}
+
+.content-box-wrapper.one>h3 {
+    color: #6e6e73;
+}
+
+.links.one>a {
+    color: #06c;
+}
+
+/* MAIN > FIRST CONTENT > iPHONE */
+.content-box.two {
+    background-image: url(images/iphone.jpg);
+}
+
+.content-box-wrapper.two {
+    padding-top: 50px;
+}
+
+.content-box-wrapper.two>h1, .content-box-wrapper.two>h2 {
+    color: #F5F5F7;
+}
+
+.links.two>a {
+    color: #2997ff;
+}
+
+/* MAIN > FIRST CONTENT > Fitness Plus */
+.content-box.three {
+    background-image: url(images/fitness-plus.jpg);
+}
+
+.content-box-wrapper.three {
+    padding-top: 60px;
+}
+
+.content-box-wrapper.three>h1 {
+    background-image: url(images/logo-fitness-plus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 28pt;
+    margin-bottom: 10pt;
+}
+
+.visuallyhidden {
+    clip-path: inset(0px 0px 100% 100%);
+}
+
+.content-box-wrapper.three>h2 {
+    color: #1d1d1f;
+}
+
+.content-box-wrapper.one>h3 {
+    color: #6e6e73;
+}
+
+.links.three>a {
+    color: #06c;
+}
+
+/* GENERAL MAIN > SECONDARY CONTENT */
+.homepage-secondary-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 12px;
+}
+
+.grid-box {
+    position: relative;
+    width: 100%;
+    height: 535px;
+    background-position: center -44px;
+}
+
+.grid-box-wrapper {
+    align-items: center;
+}
+
+/* MAIN > SECONDARY CONTENT > WATCH ULTRA */
+.grid-box.one {
+    background-image: url(images/apple-watch-ultra.jpg);
+}
+
+.grid-box-wrapper.one {
+    background-image: url(images/logo-apple-watch-ultra.png);
+    background-repeat: no-repeat;
+    border: 1px solid red;
+    margin-bottom: 10pt;
+}
