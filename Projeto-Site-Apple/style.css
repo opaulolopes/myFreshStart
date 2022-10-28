@@ -35,24 +35,35 @@ header {
 .menu-bar>a {
     color: #bbb;
     font-size: 9.7pt;
-    text-decoration: none;
     padding: 14.5px 8.1px;
     margin: 0 14px;
     transition: all .4s;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .menu-bar>a:hover {
     color: rgba(255, 255, 255, 0.87);
 }
 
-.menu-apple-icon, .menu-search-icon, .menu-store-icon {
+.menu-apple-icon,
+.menu-search-icon,
+.menu-store-icon {
     opacity: 0.85;
     background-position: center center;
     background-repeat: no-repeat;
     width: 30px;
 }
 
-.menu-apple-icon:hover, .menu-search-icon:hover, .menu-store-icon:hover {
+.menu-apple-icon:hover,
+.menu-search-icon:hover,
+.menu-store-icon:hover {
     opacity: 1;
 }
 
@@ -113,7 +124,7 @@ h2 {
     margin-top: 1pt;
 }
 
-.dark-theme>h1, 
+.dark-theme>h1,
 .dark-theme>h2 {
     color: #F5F5F7;
 }
@@ -133,12 +144,7 @@ h3 {
 .homepage-content-links>a {
     color: #06c;
     font-size: 16pt;
-    text-decoration: none;
     pointer-events: all;
-}
-
-.homepage-content-links>a:hover {
-    text-decoration: underline;
 }
 
 .homepage-content-links>a:not(:first-child) {
@@ -189,7 +195,7 @@ h3 {
 /* MAIN > SECOND GRID */
 .homepage-content-section.two-columns {
     grid-template-columns: auto auto;
-    margin: 0 12px;
+    margin: 0 12px 12px;
 }
 
 .two-columns .homepage-content-box {
@@ -300,53 +306,167 @@ h3 {
     margin-top: 5pt;
 }
 
-/* FOOTER */
-footer {
-    background-color: #F5F5F7;
-    padding: 17px 0 29px;
-    letter-spacing: .1pt;
+/* MAIN > SLIDE SECTION */
+.homepage-slide-viewport {
+    width: 1250px;
+    height: 667px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
+.homepage-slide-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.slide {
+    position: relative;
+    height: 667px;
+    flex: 0 0 1250px;
+    background-position-y: -18px;
+    background-repeat: no-repeat;
+}
+
+.slide>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#slide1 {
+    background-image: url('images/streaming/louis-armstrong.jpg');
+}
+
+#slide2 {
+    background-image: url('images/streaming/raymond-and-ray.jpg');
+}
+
+#slide3 {
+    background-image: url('images/streaming/acapulco.jpg');
+}
+
+#slide4 {
+    background-image: url('images/streaming/shantaram.jpg');
+}
+
+#slide5 {
+    background-image: url('images/streaming/operacao-cerveja.jpg');
+}
+
+#slide6 {
+    background-image: url('images/streaming/see.jpg');
+}
+
+#slide7 {
+    background-image: url('images/streaming/mal-de-familia.jpg');
+}
+
+#slide8 {
+    background-image: url('images/streaming/planeta-pre-historico.jpg');
+}
+
+#slide9 {
+    background-image: url('images/streaming/luck.jpg');
+}
+
+#slide10 {
+    background-image: url('images/streaming/ted-lasso.jpg');
+}
+
+#slide11 {
+    background-image: url('images/streaming/ruptura.jpg');
+}
+
+#slide12 {
+    background-image: url('images/streaming/jon-stewart.jpg');
+}
+
+.homepage-slider-nav {
+    text-align: center;
+    cursor: default;
+}
+
+.homepage-slider-list,
+.homepage-slider-item {
+    display: inline-block;
+}
+
+.homepage-slider-button {
+    background-color: #d6d6d6;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 16px 5.5px 14px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: all 0.3s;
+}
+
+.homepage-slider-button:hover {
+    background-color: #bbb;
+}
+
+/* GENERAL FOOTER */
+footer {
+    background-color: #F5F5F7;
+    color: #6e6e73;
+    font-size: 10pt;
+    letter-spacing: .1pt;
+    padding: 18px 0 29px;
+}
+
+.footer-container {
+    width: 980px;
+    margin: auto;
+}
+
+/* FOOTER > SECTION 1 */
 .footnotes-1 {
     border-bottom: 1px solid #d2d2d7;
     padding-bottom: 11px;
-}
-
-.footer-wrapper {
-    color: #6e6e73;
-    width: 980px;
-    font-size: 10pt;
-    margin: auto;
 }
 
 .footnotes-1>p {
     padding-bottom: 9.6px;
 }
 
-.footer-pages {
+/* FOOTER > WRAPPER */
+.footer-five-columns {
     display: flex;
     justify-content: space-between;
 }
 
-.footer-pages-column {
+.footer-column {
     width: 20%;
     margin-right: 20px;
 }
 
-.footer-pages h3 {
+.footer-column>h3 {
     font-size: 10pt;
     font-weight: bold;
     margin-top: 16pt;
     margin-bottom: 1pt;
+    cursor: default;
 }
 
-li {
+.footer-column li {
     list-style-type: none;
     padding-top: 7pt;
 }
 
+.footer-column a {
+    color: #6e6e73;
+}
+
+/* FOOTER > SECTION 2 */
 .footnotes-2 {
-    padding-top: 34px;
+    margin-top: 34px;
 }
 
 .shop {
@@ -355,39 +475,24 @@ li {
     margin-bottom: 4px;
 }
 
-.shop p {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-}
-
 .shop a {
-    color: #06C !important;
-    text-decoration: none;
-    padding-right: 0 !important;
-    margin: 0 !important;
-    border-right: none !important;
+    color: #2997ff;
 }
 
-.footnotes-2 p {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.footnotes-2 a {
+.legal a {
     color: #424245;
-    text-decoration: none;
     padding-right: 10px;
     margin-right: 7px;
     border-right: 1px solid #d2d2d7;
 }
 
-.brasil {
-    float: right;
-    padding-right: 0 !important;
-    margin: 0 !important;
-    border-right: none !important;
+.legal p {
+    padding: 5px 0;
 }
 
-.footer-pages a:hover {
-    text-decoration: underline;
+.locale {
+    float: right;
+    border: none !important;
+    padding: 5px 0 0 !important;
+    margin: 0 !important;
 }
