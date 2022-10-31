@@ -23,7 +23,7 @@ header {
     position: sticky;
     top: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1;
+    z-index: 2;
 }
 
 /* HEADER > MENU */
@@ -307,29 +307,13 @@ h3 {
 }
 
 /* MAIN > SLIDE SECTION */
-.homepage-slide-viewport {
-    width: 1250px;
-    height: 667px;
-    margin: 0 auto;
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-}
 
-.homepage-slide-viewport::-webkit-scrollbar {
-    display: none;
-}
-
-li {
-    list-style-type: none;
-}
 
 .slide {
     position: relative;
+    width: 1250px;
     height: 667px;
-    flex: 0 0 1250px;
     background-position-y: -18px;
-    background-repeat: no-repeat;
 }
 
 .slide>a {
@@ -386,30 +370,67 @@ li {
     background-image: url('images/streaming/jon-stewart.jpg');
 }
 
-.homepage-slider-nav {
+#homepage-slide-viewport .item {
+    position: relative;
+    margin: 0 6px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-bottom {
+    display: none;
+}
+
+#homepage-slide-viewport .owl-item.active.center .info-bottom {
+    display: flex;
+    letter-spacing: 0.3pt;
+    position: absolute;
+    bottom: 50px;
+    left: 69px;
+    display: flex;
+    align-items: center;
+}
+
+.button-play {
+    background-color: white;
+    font-size: 11.5pt;
+    font-weight: bold;
+    padding: 13px 25px;
+    border-radius: 50px;
+}
+
+.info-bottom>p {
+    color: white;
+    font-size: 15pt;
+    margin-left: 40px;
+}
+
+#homepage-slide-viewport .owl-item.active.center .item {
+    opacity: 1;
+}
+
+#homepage-slide-viewport.owl-carousel .owl-dots .owl-dot.active span,
+#homepage-slide-viewport.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #707070;
+}
+
+#homepage-slide-viewport.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
     text-align: center;
-    cursor: default;
 }
 
-.homepage-slider-list,
-.homepage-slider-item {
+#homepage-slide-viewport.owl-carousel .owl-dots .owl-dot span {
     display: inline-block;
-}
-
-.homepage-slider-button {
-    background-color: #d6d6d6;
-    display: inline-block;
+    background: #d6d6d6;
     width: 8px;
     height: 8px;
-    margin: 16px 5.5px 14px;
-    border: 1px solid transparent;
+    margin: 0 7px 10px;
     border-radius: 50%;
-    font-size: 0;
-    transition: all 0.3s;
-}
-
-.homepage-slider-button:hover {
-    background-color: #bbb;
+    transition: all 250ms ease-out 0s;
 }
 
 /* GENERAL FOOTER */
