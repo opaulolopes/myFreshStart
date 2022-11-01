@@ -13,6 +13,11 @@
     box-sizing: border-box;
 }
 
+:focus-visible {
+	outline: 4px solid #06c;
+    outline-offset: -3px;
+}
+
 body {
     font-family: 'San Francisco', Arial, Helvetica, sans-serif;
     color: #1d1d1f;
@@ -163,7 +168,7 @@ h3 {
 .homepage-content-wrapper.one {
     width: 350px;
     height: 200px;
-    transform: translate(274%, 126%);
+    transform: translate(50vw, 250px);
 }
 
 /* MAIN > FIRST GRID > iPHONE */
@@ -201,7 +206,7 @@ h3 {
 .two-columns .homepage-content-box {
     background-color: #FBFBFD;
     background-position: bottom;
-    width: 934px;
+    width: 48.6vw;
     height: 580px;
 }
 
@@ -307,13 +312,36 @@ h3 {
 }
 
 /* MAIN > SLIDE SECTION */
-
-
 .slide {
     position: relative;
-    width: 1250px;
-    height: 667px;
+    aspect-ratio: 1.87406297;
     background-position-y: -18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 735px) {
+    .slide {
+        width: 65vw;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .slide {
+        width: 65vw;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .slide {
+        width: 65vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .slide {
+        width: 65vw;
+    }
 }
 
 .slide>a {
@@ -385,13 +413,18 @@ h3 {
 }
 
 #homepage-slide-viewport .owl-item.active.center .info-bottom {
-    display: flex;
-    letter-spacing: 0.3pt;
     position: absolute;
     bottom: 50px;
     left: 69px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    letter-spacing: 0.3pt;
+}
+
+.button-play:hover {
+    background-color: rgba(255, 255, 255, 0.87);
+    text-decoration: none;
 }
 
 .button-play {
