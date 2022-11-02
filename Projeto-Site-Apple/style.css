@@ -31,26 +31,62 @@ header {
     z-index: 2;
 }
 
+@media only screen and (max-width: 833px) {
+    header {
+        height: 48px;
+    }
+}
+
+@media only screen and (min-width: 833px) {
+    header {
+        height: 44px;
+    }
+}
+
 /* HEADER > MENU */
 .menu-bar {
     display: flex;
-    justify-content: center;
+}
+
+@media only screen and (min-width: 833px) {
+    .menu-bar {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .menu-bar {
+        justify-content: center;
+    }
 }
 
 .menu-bar>a {
     color: #bbb;
     font-size: 9.7pt;
-    padding: 14.5px 8.1px;
-    margin: 0 14px;
     transition: all .4s;
+}
+
+@media only screen and (max-width: 833px) {
+    .menu-bar {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 833px) {
+    .menu-bar>a {
+        padding: 14.5px 15px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .menu-bar>a {
+        padding: 14.5px 8.1px;
+        margin: 0 14px;
+    }
 }
 
 a {
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .menu-bar>a:hover {
@@ -98,9 +134,27 @@ a:hover {
 
 .homepage-content-box {
     position: relative;
-    height: 692px;
-    background-position: center -44px;
     background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-box {
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box {
+        height: 650px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box {
+        background-position: center -44px;
+        background-size: auto;
+        height: 692px;
+    }
 }
 
 .homepage-content-learn-more {
@@ -113,6 +167,24 @@ a:hover {
     position: relative;
     text-align: center;
     pointer-events: none;
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-wrapper {
+        scale: 0.65;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper {
+        scale: 0.85;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-wrapper {
+        scale: 1;
+    }
 }
 
 h1 {
@@ -162,31 +234,124 @@ h3 {
 
 /* MAIN > FIRST GRID > iPAD */
 .homepage-content-box.one {
+    background-color: #FBFBFB;
     background-image: url(images/ipad.jpg);
 }
 
-.homepage-content-wrapper.one {
-    width: 350px;
-    height: 200px;
-    transform: translate(50vw, 250px);
+@media only screen and (max-width: 735px) {
+    .homepage-content-box.one {
+        background-position: 45% bottom;
+        background-size: 1400px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box.one {
+        background-position: 49% -27px;
+        background-size: 2740px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box.one {
+        background-position: 50% -40px;
+        background-size: 3000px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper.one {
+        width: 350px;
+        height: 200px;
+        transform: translate(57.5vw, 266px);
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-wrapper.one {
+        width: 350px;
+        height: 200px;
+        transform: translate(50vw, 250px);
+    }
 }
 
 /* MAIN > FIRST GRID > iPHONE */
 .homepage-content-box.two {
-    background-image: url(images/iphone.jpg);
+    background-color: black;
 }
 
-.homepage-content-wrapper.two {
-    margin-top: 51px;
+@media only screen and (max-width: 735px) {
+    .homepage-content-box.two {
+        background-image: url(images/iphone-small.jpg);
+        background-position: center -45px;
+        background-size: 730px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box.two {
+        background-image: url(images/iphone.jpg);
+        background-position: 50% -25px;
+        background-size: 2780px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box.two {
+        background-position: 50% -40px;
+        background-size: 3000px;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-wrapper.two {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper.two {
+        margin-top: 51px;
+    }
 }
 
 /* MAIN > FIRST GRID > FITNESS PLUS */
 .homepage-content-box.three {
+    background-color: #F5F5F7;
     background-image: url(images/fitness-plus.jpg);
 }
 
-.homepage-content-wrapper.three {
-    margin-top: 49px;
+@media only screen and (max-width: 735px) {
+    .homepage-content-box.three {
+        background-position: center -40px;
+        background-size: 2200px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box.three {
+        background-position: 50% -25px;
+        background-size: 2700px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box.three {
+        background-position: 50% -40px;
+        background-size: 3000px;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-wrapper.three {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper.three {
+        margin-top: 49px;
+    }
 }
 
 .three>h1 {
@@ -206,7 +371,7 @@ h3 {
 .two-columns .homepage-content-box {
     background-color: #FBFBFD;
     background-position: bottom;
-    width: 48.6vw;
+    width: 100%;
     height: 580px;
 }
 
