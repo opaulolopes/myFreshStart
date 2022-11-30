@@ -1,0 +1,696 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'San Francisco';
+    src: url('fonts/SF-Pro-Regular.otf') format('opentype'),
+        url('fonts/SF-Pro-Bold.otf') format('opentype');
+}
+
+/* GENERAL STYLESHEETS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:focus-visible {
+	outline: 4px solid #06c;
+    outline-offset: -3px;
+}
+
+body {
+    font-family: 'San Francisco', Arial, Helvetica, sans-serif;
+    color: #1d1d1f;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    padding: 0 14px;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 835px) {
+    header {
+        height: 48px;
+    }
+}
+
+@media only screen and (min-width: 835px) {
+    header {
+        height: 44px;
+    }
+}
+
+/* MAIN > FIRST GRID */
+.homepage-content-section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 12px;
+    margin-bottom: 12px;
+}
+
+.homepage-content-box {
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-box {
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box {
+        height: 650px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box {
+        background-position: center -44px;
+        background-size: auto;
+        height: 692px;
+    }
+}
+
+.homepage-content-learn-more {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-content-wrapper {
+    position: relative;
+    text-align: center;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-wrapper {
+        scale: 0.65;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper {
+        scale: 0.85;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-wrapper {
+        scale: 1;
+    }
+}
+
+h1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 42pt;
+    letter-spacing: 0.9pt;
+}
+
+h2 {
+    font-size: 21pt;
+    font-weight: normal;
+    letter-spacing: 0.1pt;
+    margin-top: 1pt;
+}
+
+.dark-theme>h1,
+.dark-theme>h2 {
+    color: #F5F5F7;
+}
+
+h3 {
+    color: #6e6e73;
+    font-size: 16pt;
+    font-weight: normal;
+    letter-spacing: 0.1pt;
+    margin-top: 10pt;
+}
+
+.homepage-content-links {
+    margin-top: 13pt;
+}
+
+.homepage-content-links>a {
+    color: #06c;
+    font-size: 16pt;
+    pointer-events: all;
+}
+
+.homepage-content-links>a:not(:first-child) {
+    margin-left: 39px;
+}
+
+.homepage-content-links.dark-theme>a {
+    color: #2997ff;
+}
+
+/* MAIN > FIRST GRID > iPAD */
+.homepage-content-box.one {
+    background-color: #FBFBFB;
+    background-image: url(images/ipad.jpg);
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-box.one {
+        background-position: 45% bottom;
+        background-size: 1400px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box.one {
+        background-position: 49% -27px;
+        background-size: 2740px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box.one {
+        background-position: 50% -40px;
+        background-size: 3000px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper.one {
+        width: 350px;
+        height: 200px;
+        transform: translate(57.5vw, 266px);
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-wrapper.one {
+        width: 350px;
+        height: 200px;
+        transform: translate(50vw, 250px);
+    }
+}
+
+/* MAIN > FIRST GRID > iPHONE */
+.homepage-content-box.two {
+    background-color: black;
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-box.two {
+        background-image: url(images/iphone-small.jpg);
+        background-position: center -45px;
+        background-size: 730px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box.two {
+        background-image: url(images/iphone.jpg);
+        background-position: 50% -25px;
+        background-size: 2780px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box.two {
+        background-position: 50% -40px;
+        background-size: 3000px;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-wrapper.two {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper.two {
+        margin-top: 51px;
+    }
+}
+
+/* MAIN > FIRST GRID > FITNESS PLUS */
+.homepage-content-box.three {
+    background-color: #F5F5F7;
+    background-image: url(images/fitness-plus.jpg);
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-box.three {
+        background-position: center -40px;
+        background-size: 2200px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-box.three {
+        background-position: 50% -25px;
+        background-size: 2700px;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .homepage-content-box.three {
+        background-position: 50% -40px;
+        background-size: 3000px;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-wrapper.three {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-wrapper.three {
+        margin-top: 49px;
+    }
+}
+
+.three>h1 {
+    background-image: url(images/logo-fitness-plus.png);
+}
+
+.visuallyhidden {
+    clip-path: inset(0px 0px 100% 100%);
+}
+
+/* MAIN > SECOND GRID */
+.homepage-content-section.two-columns {
+    margin: 0 0 12px 12px;
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-section.two-columns {
+grid-template-columns: auto;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-section.two-columns {
+grid-template-columns: 48.5% 48.5%;
+    }
+}
+
+    @media only screen and (min-width: 1069px) {
+        .homepage-content-section.two-columns {
+    grid-template-columns: 49.3% 49.3%;
+        }
+}
+
+.two-columns .homepage-content-box {
+    background-color: #FBFBFD;
+    background-position: bottom;
+    width: 100%;
+    height: 580px;
+}
+
+.two-columns h1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 29pt;
+    margin-top: 52px;
+}
+
+.two-columns h2 {
+    font-size: 16pt;
+    margin-top: 2pt;
+}
+
+.two-columns h3 {
+    font-size: 13pt;
+    letter-spacing: 0.3pt;
+    margin-top: 8pt;
+}
+
+.two-columns .homepage-content-links {
+    margin-top: 10pt;
+}
+
+.two-columns .homepage-content-links>a {
+    font-size: 13pt;
+    margin-top: 0pt;
+}
+
+/* MAIN > SECOND GRID > WATCH ULTRA */
+.homepage-content-box.four {
+    background-image: url(images/apple-watch-ultra.jpg);
+}
+
+.homepage-content-wrapper.four>h1 {
+    background-image: url(images/logo-apple-watch-ultra.png);
+    padding: 5px 0;
+    margin-top: 43pt;
+    margin-bottom: 6pt;
+}
+
+/* MAIN > SECOND GRID > WATCH SERIES 8 */
+.homepage-content-box.five {
+    background-image: url(images/apple-watch-series-8.jpg);
+}
+
+.homepage-content-wrapper.five>h1 {
+    background-image: url(images/logo-apple-watch-series-8.png);
+    padding: 5px 0;
+    margin-top: 43pt;
+    margin-bottom: 6pt;
+}
+
+/* MAIN > SECOND GRID > iPHONE 14 */
+.homepage-content-box.six {
+    background-image: url(images/iphone14.jpg);
+    background-position-y: 40px;
+}
+
+/* MAIN > SECOND GRID > iPAD PRO */
+.homepage-content-box.seven {
+    background-image: url(images/ipad-pro.jpg);
+}
+
+.homepage-content-wrapper.seven>h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3pt;
+    margin-bottom: -3pt;
+}
+
+.logo-m2 {
+    background-image: url(images/logo-m2-chip.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 37px;
+    height: 37px;
+}
+
+/* MAIN > SECOND GRID > TV 4K */
+.homepage-content-box.eight {
+    background-image: url(images/tv-4k.jpg);
+}
+
+.homepage-content-wrapper.eight>h1 {
+    background-image: url(images/logo-tv-4k.png);
+    margin-top: 37pt;
+    margin-bottom: 4pt;
+}
+
+/* MAIN > SECOND GRID > MACBOOK AIR */
+.homepage-content-box.nine {
+    background-image: url(images/macbook-air.png);
+}
+
+.homepage-content-wrapper.nine>h2 {
+    background-image: url(images/logo-macbook-air.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 5pt;
+}
+
+/* MAIN > SLIDE SECTION */
+.slide {
+    position: relative;
+    aspect-ratio: 1.87406297;
+    background-position-y: -18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 735px) {
+    .slide {
+        width: 65vw;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .slide {
+        width: 65vw;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .slide {
+        width: 65vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .slide {
+        width: 65vw;
+    }
+}
+
+.slide>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#slide1 {
+    background-image: url('images/streaming/louis-armstrong.jpg');
+}
+
+#slide2 {
+    background-image: url('images/streaming/raymond-and-ray.jpg');
+}
+
+#slide3 {
+    background-image: url('images/streaming/acapulco.jpg');
+}
+
+#slide4 {
+    background-image: url('images/streaming/shantaram.jpg');
+}
+
+#slide5 {
+    background-image: url('images/streaming/operacao-cerveja.jpg');
+}
+
+#slide6 {
+    background-image: url('images/streaming/see.jpg');
+}
+
+#slide7 {
+    background-image: url('images/streaming/mal-de-familia.jpg');
+}
+
+#slide8 {
+    background-image: url('images/streaming/planeta-pre-historico.jpg');
+}
+
+#slide9 {
+    background-image: url('images/streaming/luck.jpg');
+}
+
+#slide10 {
+    background-image: url('images/streaming/ted-lasso.jpg');
+}
+
+#slide11 {
+    background-image: url('images/streaming/ruptura.jpg');
+}
+
+#slide12 {
+    background-image: url('images/streaming/jon-stewart.jpg');
+}
+
+#homepage-slide-viewport .item {
+    position: relative;
+    margin: 0 6px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-bottom {
+    display: none;
+}
+
+#homepage-slide-viewport .owl-item.active.center .info-bottom {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    letter-spacing: 0.3pt;
+}
+
+.button-play:hover {
+    background-color: rgba(255, 255, 255, 0.87);
+    text-decoration: none;
+}
+
+.button-play {
+    background-color: white;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 735px) {
+    .button-play {
+        padding: 13px 15px;
+        font-size: 11.5pt;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .button-play {
+        padding: 13px 15px;
+        font-size: 11pt;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .button-play {
+        padding: 13px 25px;
+        font-size: 11.5pt;
+    }
+}
+
+.info-bottom>p {
+    color: white;
+    margin-left: 40px;
+    text-shadow: 1px 1px black;
+}
+
+@media only screen and (min-width: 1069px) {
+    .info-bottom>p {
+        font-size: 15pt;
+    }
+}
+
+#homepage-slide-viewport .owl-item.active.center .item {
+    opacity: 1;
+}
+
+#homepage-slide-viewport.owl-carousel .owl-dots .owl-dot.active span,
+#homepage-slide-viewport.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #707070;
+}
+
+#homepage-slide-viewport.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#homepage-slide-viewport.owl-carousel .owl-dots .owl-dot span {
+    display: inline-block;
+    background: #d6d6d6;
+    width: 8px;
+    height: 8px;
+    margin: 0 7px 10px;
+    border-radius: 50%;
+    transition: all 250ms ease-out 0s;
+}
+
+/* GENERAL FOOTER */
+footer {
+    background-color: #F5F5F7;
+    color: #6e6e73;
+    font-size: 10pt;
+    letter-spacing: .1pt;
+    padding: 18px 0 29px;
+}
+
+.footer-container {
+    margin: auto;
+}
+
+@media only screen and (max-width: 735) {
+    .footer-container {
+        width: 95vw;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .footer-container {
+        width: 95vw;
+    }
+}
+
+@media only screen and (min-width: 1035px) {
+    .footer-container {
+        width: 980px;
+    }
+}
+
+/* FOOTER > SECTION 1 */
+.footnotes-1 {
+    border-bottom: 1px solid #d2d2d7;
+    padding-bottom: 11px;
+}
+
+.footnotes-1>p {
+    padding-bottom: 9.6px;
+}
+
+/* FOOTER > WRAPPER */
+.footer-five-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.footer-column>h3 {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 16pt;
+    margin-bottom: 1pt;
+    cursor: default;
+}
+
+.footer-column li {
+    list-style-type: none;
+    padding-top: 7pt;
+}
+
+.footer-column a {
+    color: #6e6e73;
+}
+
+/* FOOTER > SECTION 2 */
+.footnotes-2 {
+    margin-top: 34px;
+}
+
+.shop {
+    padding-bottom: 9px;
+    border-bottom: 1px solid #d2d2d7;
+    margin-bottom: 4px;
+}
+
+.shop a {
+    color: #2997ff;
+}
+
+.legal a {
+    color: #424245;
+    padding-right: 10px;
+    margin-right: 7px;
+    border-right: 1px solid #d2d2d7;
+}
+
+.legal p {
+    padding: 5px 0;
+}
+
+.locale {
+    float: right;
+    border: none !important;
+    padding: 5px 0 0 !important;
+    margin: 0 !important;
+}
