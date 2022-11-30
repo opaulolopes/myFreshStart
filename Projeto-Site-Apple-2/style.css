@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'San Francisco';
+    src: url('fonts/SF-Pro-Regular.otf') format('opentype'),
+        url('fonts/SF-Pro-Bold.otf') format('opentype');
+}
+
+/* GENERAL STYLESHEETS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:focus-visible {
+	outline: 4px solid #06c;
+    outline-offset: -3px;
+}
+
+body {
+    font-family: 'San Francisco', Arial, Helvetica, sans-serif;
+    color: #1d1d1f;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    padding: 0 14px;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 835px) {
+    header {
+        height: 48px;
+    }
+}
+
+@media only screen and (min-width: 835px) {
+    header {
+        height: 44px;
+    }
+}

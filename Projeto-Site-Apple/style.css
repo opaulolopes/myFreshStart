@@ -364,8 +364,25 @@ h3 {
 
 /* MAIN > SECOND GRID */
 .homepage-content-section.two-columns {
-    grid-template-columns: auto auto;
-    margin: 0 12px 12px;
+    margin: 0 0 12px 12px;
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-content-section.two-columns {
+grid-template-columns: auto;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .homepage-content-section.two-columns {
+grid-template-columns: 48.5% 48.5%;
+    }
+}
+
+    @media only screen and (min-width: 1069px) {
+        .homepage-content-section.two-columns {
+    grid-template-columns: 49.3% 49.3%;
+        }
 }
 
 .two-columns .homepage-content-box {
@@ -579,8 +596,8 @@ h3 {
 
 #homepage-slide-viewport .owl-item.active.center .info-bottom {
     position: absolute;
-    bottom: 50px;
-    left: 69px;
+    bottom: 10%;
+    left: 5%;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -594,16 +611,41 @@ h3 {
 
 .button-play {
     background-color: white;
-    font-size: 11.5pt;
     font-weight: bold;
-    padding: 13px 25px;
     border-radius: 50px;
+}
+
+@media only screen and (max-width: 735px) {
+    .button-play {
+        padding: 13px 15px;
+        font-size: 11.5pt;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .button-play {
+        padding: 13px 15px;
+        font-size: 11pt;
+    }
+}
+
+@media only screen and (min-width: 1069px) {
+    .button-play {
+        padding: 13px 25px;
+        font-size: 11.5pt;
+    }
 }
 
 .info-bottom>p {
     color: white;
-    font-size: 15pt;
     margin-left: 40px;
+    text-shadow: 1px 1px black;
+}
+
+@media only screen and (min-width: 1069px) {
+    .info-bottom>p {
+        font-size: 15pt;
+    }
 }
 
 #homepage-slide-viewport .owl-item.active.center .item {
@@ -641,8 +683,25 @@ footer {
 }
 
 .footer-container {
-    width: 980px;
     margin: auto;
+}
+
+@media only screen and (max-width: 735) {
+    .footer-container {
+        width: 95vw;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .footer-container {
+        width: 95vw;
+    }
+}
+
+@media only screen and (min-width: 1035px) {
+    .footer-container {
+        width: 980px;
+    }
 }
 
 /* FOOTER > SECTION 1 */
