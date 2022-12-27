@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --cor-body: rgb(242, 196, 196);
+  --cor-header: rgba(238, 242, 243, 0.8);
+  --cor-menu-e-rodape: rgb(191, 11, 26);
+  --cor-servico-superior: rgba(238, 242, 243, 0.45);
+  --cor-insta: rgb(217, 121, 121);
+}
+
+::selection {
+  background: rgb(253, 213, 213);
+  color: rgb(93, 10, 10);
+}
+
+/* INICIO CONFIGURAÇÕES GERAIS */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-body);
+  font-family: "Raleway", Arial, sans-serif;
+  line-height: 1.5em;
+  cursor: default;
+}
+
+header {
+  background-color: var(--cor-header);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+main {
+  position: relative;
+  top: 100px;
+}
+
+footer {
+  background-color: var(--cor-menu-e-rodape);
+  color: var(--cor-header);
+  letter-spacing: .1em;
+  text-align: center;
+  position: absolute;
+  padding: 15px;
+  margin-top: 50px;
+  left: 0;
+  right: 0;
+}
+
+footer a {
+  color: var(--cor-header);
+}
+
+a {
+  text-decoration: none;
+}
+/* FIM CONFIGURAÇÕES GERAIS */
+
+/* INICIO MENU */
+header img {
+}
+
+nav {
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+}
+
+nav a {
+  color: var(--cor-menu-e-rodape);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 20px;
+  transition: all 0.6s;
+}
+
+nav a:hover {
+  color: var(--cor-menu-e-rodape);
+  filter: grayscale(7);
+}
+
+/* FIM MENU
+
+INICIO HORÁRIOS DO TOPO */
+.contato-topo {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--cor-header);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100vw;
+  padding: 1.7em 0;
+  z-index: 1;
+}
+
+.contato-topo a {
+  color: var(--cor-header);
+  transition: all 0.4s;
+}
+
+h2 {
+  border: 5px solid white;
+  font-size: 18pt;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  padding-bottom: 0.7em;
+}
+
+h2:has(.fa-clock-o) {
+  transform: translateX(-40px);
+}
+
+h2:has(.fa-map-marker) {
+  transform: translateX(-33px);
+}
+
+h2:has(.fa-mobile) {
+  transform: translateX(-25px);
+}
+
+.contato-div p {
+  font-size: 13pt;
+}
+
+.contato-div a:hover {
+  color: var(--cor-insta);
+}
+/* FIM HORÁRIOS DO TOPO
+
+INICIO SERVIÇOS */
+#servicos {
+}
+
+/* Embrulhos */
+.servicos-primeiro {
+  background: url("imagens/massagem-terapeutica.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.servicos-segundo {
+  background: url("imagens/liberacao-miofascial.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.servicos-terceiro {
+  background: url("imagens/pedras-quentes.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.servicos-quarto {
+  background: url("imagens/dry-needling.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.servicos-quinto {
+  background: url("imagens/ventosaterapia.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Figura dos serviços */
+.servicos-figura-superior {
+  background-color: var(--cor-servico-superior);
+  height: calc(50vh - 100px);
+  position: relative;
+}
+
+h1 {
+  color: var(--cor-menu-e-rodape);
+  font-size: 18pt;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 0 35%;
+  border-top: 1px solid rgb(115, 115, 115);
+  border-bottom: 1px solid rgb(115, 115, 115);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.servicos-primeiro:first-child h1 {
+  top: 75%;
+}
+
+.servicos-figura-inferior {
+  background-color: var(--cor-inferior);
+  height: 50vh;
+}
+/* FIM SERVIÇOS
+
+INICIO SOBRE */
+#sobre {
+  width: 950px;
+  margin: auto;
+  padding: 9em 0;
+}
+
+h3 {
+  color: var(--cor-menu-e-rodape);
+  font-size: 20pt;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+h4 {
+  color: var(--cor-insta);
+  font-size: 18pt;
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.sobre-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sobre-flex p {
+  color: var(--cor6);
+  font-size: 16pt;
+  line-height: 2em;
+  width: 450px;
+}
+/* FIM SOBRE
+
+INICIO PUBLICAÇÕES*/
+#insta {
+  background-color: var(--cor-header);
+  padding: 9em 25%;
+}
+/* FIM PUBLICAÇÕES
+
+INICIO CONTATO DO FIM*/
+#contato-fim {
+  background-color: var(--cor-menu-e-rodape);
+  color: var(--cor-header);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5em 0;
+}
+
+#contato-fim h1 {
+}
+
+.contato-div {
+}
+
+.contato-div address,
+.phone {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.phone {
+  padding-left: 10px;
+  width: 195px;
+}
+
+.phone a {
+  color: var(--cor-header);
+  transition: all .4s;
+}
+
+.phone a:hover {
+  color: white;
+  font-weight: bold;
+}
+/* FIM CONTATO DO FIM
+
+/* Verificar estilos em comum (h1 e p, por exemplo) */
