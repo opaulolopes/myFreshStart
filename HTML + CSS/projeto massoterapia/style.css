@@ -1,32 +1,36 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'Raleway', Arial, sans-serif;
-  src: local('Inconsolata'), url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap') format('truetype');
+  font-family: "Raleway", Arial, sans-serif;
+  src: local("Inconsolata"),
+    url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap")
+      format("truetype");
 }
 
 :root {
-  --cor-body: rgb(242, 196, 196);
-  --cor-header: rgba(238, 242, 243, 0.8);
-  --cor-menu-e-rodape: rgb(191, 11, 26);
-  --cor-servico-superior: rgba(238, 242, 243, 0.45);
-  --cor-insta: rgb(217, 121, 121);
+  --cor-clara: rgba(238, 242, 243, 0.8);
+  --cor-roseada: rgb(255, 237, 238);
+  --cor-rubro: rgb(164, 11, 26);
+  --cor-escura: rgb(82, 81, 81);
 }
 
 ::selection {
-  background: rgb(253, 213, 213);
-  color: rgb(93, 10, 10);
+  background: rgb(255, 206, 208);
+  color: rgb(59, 59, 59);
 }
 
 /* INICIO CONFIGURAÇÕES GERAIS */
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--cor-body);
+  background-color: var(--cor-roseada);
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5em;
   cursor: default;
@@ -34,40 +38,31 @@ body {
 
 header {
   position: fixed;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100vw;
   height: 100px;
   padding: 0 5%;
-  background-color: var(--cor-header);
+  background-color: var(--cor-clara);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  z-index: 3;
 }
 
 main {
-  position: relative;
-  top: 100px;
-  width: 100vw;
+  transform: translateY(100px);
 }
 
 footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100vw;
+  transform: translateY(50px);
   margin-top: 50px;
-  padding: 15px;
-  background-color: var(--cor-menu-e-rodape);
-  color: var(--cor-header);
+  padding: 10px;
+  background-color: var(--cor-rubro);
+  color: var(--cor-clara);
   letter-spacing: 0.1em;
   text-align: center;
-}
-
-footer a {
-  color: var(--cor-header);
 }
 
 a {
@@ -87,120 +82,124 @@ ul {
   list-style-type: none;
 }
 
-nav a {
+.menu-item {
   font-weight: bold;
   padding: 20px;
-  color: var(--cor-menu-e-rodape);
+  color: var(--cor-rubro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.6s;
 }
 
-nav a:hover {
+.menu-instagram {
+  padding: 25px 20px 15px;
+  color: var(--cor-rubro);
+  transition: all 0.6s;
+}
+
+.menu-item:hover,
+.menu-instagram:hover {
   filter: grayscale(7);
-  color: var(--cor-menu-e-rodape);
 }
 
 .fa.fa-instagram {
+  margin: 50px 0;
   font-size: 20pt;
 }
-
 /* FIM MENU
 
-INICIO HORÁRIOS DO TOPO */
-.contato-topo {
+INICIO INFORMAÇÕES DO TOPO */
+.topo-info {
   position: absolute;
+  z-index: 1;
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
   padding: 1.7em 0;
   background-color: rgba(0, 0, 0, 0.6);
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--cor-header);
-  z-index: 1;
-}
-
-.contato-topo a {
-  color: var(--cor-header);
-  transition: all 0.4s;
+  color: var(--cor-clara);
 }
 
 h2 {
-  padding-bottom: 0.7em;
+  margin-bottom: 0.7em;
   font-size: 20pt;
   font-weight: normal;
   letter-spacing: 0.1em;
-}
-
-h2:has(.fa-clock-o) {
-  transform: translateX(-40px);
 }
 
 .fa.fa-clock-o,
 .fa.fa-map-marker,
 .fa.fa-mobile,
 .fa.fa-home {
-  font-size: 26pt;
+  font-size: 24pt;
+}
+
+h2:has(.fa-clock-o) {
+  transform: translateX(-42px);
 }
 
 h2:has(.fa-map-marker) {
   transform: translateX(-33px);
 }
 
+h2:has(.fa-mobile) {
+  transform: translateX(-26px);
+}
+
 address {
   font-style: normal;
 }
 
-h2:has(.fa-mobile) {
-  transform: translateX(-25px);
+.numero {
+  color: var(--cor-clara);
 }
 
-.contato-div p {
-  font-size: 14pt;
+.numero:hover {
+  color: white;
+  font-weight: bold;
 }
-
-.contato-div a:hover {
-  color: var(--cor-insta);
-}
-/* FIM HORÁRIOS DO TOPO
+/* FIM INFORMAÇÕES DO TOPO
 
 INICIO SERVIÇOS */
-/* Embrulhos */
-.servicos-primeiro {
+.servicos-um {
   background: url("imagens/massagem-terapeutica.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-.servicos-segundo {
+.servicos-dois {
   background: url("imagens/liberacao-miofascial.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-.servicos-terceiro {
+.servicos-tres {
   background: url("imagens/pedras-quentes.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-.servicos-quarto {
+.servicos-quatro {
   background: url("imagens/dry-needling.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-.servicos-quinto {
+.servicos-cinco {
   background: url("imagens/ventosaterapia.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-/* Figura dos serviços */
-.servicos-figura-superior {
+.servicos-superior {
   position: relative;
   height: calc(50vh - 100px);
-  background-color: var(--cor-servico-superior);
+  background-color: rgba(238, 242, 243, 0.45);
+}
+
+.servicos-inferior {
+  height: 50vh;
 }
 
 h1 {
@@ -211,58 +210,54 @@ h1 {
   transform: translate(0, -50%);
   margin: 0 26%;
   padding: 20px 0;
-  border-top: 1px solid rgb(115, 115, 115);
-  border-bottom: 1px solid rgb(115, 115, 115);
+  border-top: 1px solid var(--cor-escura);
+  border-bottom: 1px solid var(--cor-escura);
   font-size: 22pt;
-  color: var(--cor-menu-e-rodape);
+  color: var(--cor-rubro);
   letter-spacing: 0.2em;
   line-height: 1.5em;
   text-align: center;
   text-transform: uppercase;
 }
 
-.servicos-primeiro:first-child h1 {
+.servicos-um:first-child h1 {
   top: 75%;
-}
-
-.servicos-figura-inferior {
-  height: 50vh;
-  background-color: var(--cor-inferior);
 }
 /* FIM SERVIÇOS
 
 INICIO SOBRE */
 #sobre {
-  width: 950px;
-  margin: auto;
   padding: 7em 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
   font-size: 18pt;
-  color: var(--cor-menu-e-rodape);
+  color: var(--cor-rubro);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   text-align: center;
 }
 
 h4 {
-  padding-bottom: 2em;
+  margin-bottom: 2em;
   font-size: 16pt;
-  color: var(--cor-insta);
+  color: var(--cor-escura);
   letter-spacing: 0.15em;
   text-align: center;
 }
 
-.sobre-flex {
+.sobre-colunas {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.sobre-flex p {
-  width: 450px;
+.sobre-colunas p {
+  width: 360px;
+  margin-left: 2em;
   font-size: 14pt;
+  color: var(--cor-escura);
   line-height: 2em;
 }
 /* FIM SOBRE
@@ -270,48 +265,43 @@ h4 {
 INICIO PUBLICAÇÕES*/
 #insta {
   padding: 7em 25%;
-  background-color: var(--cor-header);
+  background-color: var(--cor-clara);
 }
 /* FIM PUBLICAÇÕES
 
-INICIO CONTATO DO FIM*/
-#contato-fim {
+INICIO INFORMAÇÕES FINAIS*/
+#inferior-info {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 7em 0;
-  background-color: var(--cor-menu-e-rodape);
+  padding: 4em 0;
+  background-color: var(--cor-rubro);
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--cor-header);
+  color: var(--cor-clara);
 }
 
-.horarios-contato {
+.inferior-info-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 600px;
+  width: 80vw;
 }
 
-.contato-div address,
-.phone {
+.inferior-info-div address,
+.inferior-numero {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
-  justify-content: space-between;
+}
+
+.inferior-info-div address {
   width: 300px;
 }
 
-.phone {
-  width: 195px;
-  padding: 1em 0 0 10px;
-}
-
-.phone a {
-  color: var(--cor-header);
-  transition: all 0.4s;
-}
-
-.phone a:hover {
-  font-weight: bold;
-  color: white;
+.inferior-numero {
+  width: 193px;
+  margin-top: 0.5em;
+  padding-left: 8px;
 }
 
 .mapa {
@@ -319,4 +309,14 @@ INICIO CONTATO DO FIM*/
   height: 200px;
   border: 0;
 }
-/* FIM CONTATO DO FIM
+/* FIM INFORMAÇÕES FINAIS
+
+FOOTER */
+footer a {
+  color: var(--cor-clara);
+}
+
+/* POR QUE FOOTER ESTÁ EMBAIXO
+Verificar padding e margin
+Ler best practices
+Passar hover pro desktop */
