@@ -13,7 +13,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bf0b1a">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </head>
@@ -25,86 +24,78 @@
     <nav>
       <ul>
         <li>
-          <a class="menu-item" href="#servicos" title="Ir para a seção de Serviços">Serviços</a>
+          <a class="menu-item" href="#servicos-container" title="Ir para a seção de Serviços">Serviços</a>
         </li>
         <li>
-          <a class="menu-item" href="#sobre" title="Ir para a seção sobre a massoterapeuta">Sobre mim</a>
+          <a class="menu-item" href="#sobre-container" title="Ir para a seção sobre a massoterapeuta">Sobre mim</a>
         </li>
         <li>
-          <a class="menu-item" href="#insta" title="Ir para a seção de publicações do Instagram">Publicações</a>
+          <a class="menu-item" href="#insta-container" title="Ir para a seção de publicações do Instagram">Publicações</a>
         </li>
         <li>
-          <a class="menu-item" href="#contato-fim" title="Ir para a seção de Contato">Contato</a>
+          <a class="menu-item" href="#inferior-info-container" title="Ir para a seção de Contato">Contato</a>
         </li>
         <li>
-          <a class="menu-instagram" rel="noopener" class="menu-insta"
-            href="https://www.instagram.com/tatyanne.massoterapeuta/" target="_blank" title="Visitar o Instagram"><span
-              class="fa fa-instagram"></span></a>
+          <a class="menu-instagram" rel="noopener" href="https://www.instagram.com/tatyanne.massoterapeuta/"
+            target="_blank" title="Visitar o Instagram"></a>
         </li>
       </ul>
     </nav>
   </header>
   <main>
-    <div class="topo-info">
-      <div class="topo-info-wrapper">
-        <h2>
-          <span class="fa fa-clock-o"></span> Horários
-        </h2>
-        <p>Seg-Sex: 8:00 - 20:00</p>
-        <p>Sáb: 9:00 - 17:00</p>
-      </div>
-      <div class="topo-info-wrapper">
-        <h2>
-          <span class="fa fa-map-marker"></span>
-          Endereço
-        </h2>
-        <address>
-          R. C-178, 550 - St. Nova Suíça,<br>Goiânia - GO, 74275-227, Brasil
-        </address>
-      </div>
-      <div class="topo-info-wrapper">
-        <h2>
-          <span class="fa fa-mobile"></span> Telefone
-        </h2>
-        <a class="numero" href="tel:5562982307906" title="Ligar para Tatyanne">+55 62 9 8230-7906</a>
-      </div>
+    <div id="topo-info-container">
+        <div class="info-wrapper">
+          <h2 class="horario-icon">Horários</h2>
+          <p>Seg-Sex: 8:00 - 20:00</p>
+          <p>Sáb: 9:00 - 17:00</p>
+        </div>
+        <div class="info-wrapper">
+          <h2 class="endereco-icon">Endereço</h2>
+          <address>
+            R. C-178, 550 - St. Nova Suíça,<br>Goiânia - GO, 74275-227, Brasil
+          </address>
+        </div>
+        <div class="info-wrapper">
+          <h2 class="telefone-icon">Telefone</h2>
+          <a class="numero" href="tel:5562982307906" title="Ligar para Tatyanne">+55 62 9 8230-7906</a>
+        </div>
     </div>
-    <div id="servicos">
-      <div class="servicos-um">
-        <div class="servicos-superior">
+    <div id="servicos-container">
+      <div class="servico-um" loading="lazy">
+        <div class="servico-superior">
           <h1>Massagem Terapêutica</h1>
         </div>
-        <div class="servicos-inferior"></div>
+        <div class="servico-inferior"></div>
       </div>
-      <div class="servicos-dois">
-        <div class="servicos-superior">
+      <div class="servico-dois" loading="lazy">
+        <div class="servico-superior">
           <h1>Liberação Miofascial</h1>
         </div>
-        <div class="servicos-inferior"></div>
+        <div class="servico-inferior"></div>
       </div>
-      <div class="servicos-tres">
-        <div class="servicos-superior">
+      <div class="servico-tres" loading="lazy">
+        <div class="servico-superior">
           <h1>Massagem Relaxante com Pedras Quentes</h1>
         </div>
-        <div class="servicos-inferior"></div>
+        <div class="servico-inferior"></div>
       </div>
-      <div class="servicos-quatro">
-        <div class="servicos-superior">
+      <div class="servico-quatro" loading="lazy">
+        <div class="servico-superior">
           <h1>Dry Needling</h1>
         </div>
-        <div class="servicos-inferior"></div>
+        <div class="servico-inferior"></div>
       </div>
-      <div class="servicos-cinco">
-        <div class="servicos-superior">
+      <div class="servico-cinco" loading="lazy">
+        <div class="servico-superior">
           <h1>Ventosaterapia</h1>
         </div>
-        <div class="servicos-inferior"></div>
+        <div class="servico-inferior"></div>
       </div>
     </div>
-    <div id="sobre">
+    <div id="sobre-container">
       <h3>Tatyanne Massoterapeuta</h3>
       <h4>Uma maneira natural de curar</h4>
-      <div class="sobre-colunas">
+      <div class="sobre-wrapper">
         <p>
           Sou uma Massoterapeuta experiente em Goiânia e uma firme crente em
           adotar uma abordagem holística para a cura.
@@ -116,32 +107,21 @@
         </p>
       </div>
     </div>
-    <div id="insta">
+    <div id="insta-container">
       <div class="elfsight-app-6673091a-23a0-4e4a-bd5b-8c1642fd9221"></div>
     </div>
-    <div id="inferior-info">
-      <div class="inferior-info-wrapper">
-        <div class="inferior-info-div">
+    <div id="inferior-info-container">
+        <div class="info-wrapper">
           <h2>Horários</h2>
           <p>Seg-Sex: 8:00 - 20:00</p>
           <p>Sáb: 9:00 - 17:00</p>
         </div>
-        <div class="inferior-info-div">
+        <div class="info-wrapper">
           <h2>Contato</h2>
-          <address>
-            <span class="fa fa-home"></span>
-            R. C-178, 550 - St. Nova Suíça, Goiânia - GO, 74275-227, Brasil
-          </address>
-          <div class="inferior-numero">
-            <span class="fa fa-mobile"></span>
-            <a class="numero" href="tel:5562982307906" title="Ligar para Tatyanne">
-              +55 62 9 8230-7906</a>
-          </div>
+          <address class="endereco-icon">R. C-178, 550 - St. Nova Suíça, Goiânia - GO, 74275-227, Brasil</address>
+          <a class="telefone-icon numero" href="tel:5562982307906" title="Ligar para Tatyanne">+55 62 9 8230-7906</a>
         </div>
-        <iframe class="mapa" title="Mapa do local"
-          src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d3!2d-49.27176118847014!3d-16.71898770638619!2m2!1f129.14!2f90!3m2!1i1024!2i768!4f75!3m3!1m2!1s0x935ef0d9a7b87157%3A0xc9d6970822536b97!2sR.%20C-178%2C%20550%20-%20St.%20Nova%20Suica%2C%20Goi%C3%A2nia%20-%20GO%2C%2074275-227!5e0!3m2!1spt-BR!2sbr!4v1672089819703!5m2!1spt-BR!2sbr"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+        <a href="https://goo.gl/maps/sX24mMGdGmutFA2L8"><img class="mapa" src="imagens/mapa.jpg" alt="Mapa com direções até o local"></a>
     </div>
     <div class="elfsight-app-7fdad4de-764b-4540-a05b-e4ef8dc521d9"></div>
   </main>
