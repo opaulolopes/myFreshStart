@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-/* MEDIA QUERIES:
-600
-768
-992
-1200
-*/
-
 @font-face {
   font-family: "Raleway", Arial, sans-serif;
   src: local("Inconsolata"),
@@ -14,6 +7,7 @@
       format("truetype");
 }
 
+/* INICIO CONFIGURAÇÕES GERAIS */
 :root {
   --cor-clara: rgba(238, 242, 243, 0.8);
   --cor-roseada: rgb(255, 237, 238);
@@ -26,7 +20,6 @@
   color: rgb(59, 59, 59);
 }
 
-/* INICIO CONFIGURAÇÕES GERAIS */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -41,30 +34,39 @@ body {
   font-family: "Raleway", Arial, sans-serif;
   font-display: swap;
   line-height: 1.5em;
-  cursor: default;
+}/*
+@media only screen and (min-width: 1024px) {
+  body {
+    cursor: default;
+  }
 }
-
+*/
 header {
   position: fixed;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100vw;
   height: 100px;
-  padding: 0 1%;
   background-color: var(--cor-clara);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
-@media only screen and (max-width: 768px) {
-  /* DROPDOWN MENU */
+/*@media only screen and (max-width: 768px) {
+  /* DROPDOWN MENU 
   header {
     display: none;
   }
 }
-
+@media only screen and (min-width: 768px) {
+  /* DROPDOWN MENU 
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+  }
+}
+*/
 footer {
   padding-bottom: 10px;
   background-color: var(--cor-rubro);
@@ -76,14 +78,14 @@ footer {
 a {
   text-decoration: none;
 }
-/* FIM CONFIGURAÇÕES GERAIS */
+/* FIM CONFIGURAÇÕES GERAIS
 
-/* INICIO MENU */
+INICIO MENU */
 .logo {
   aspect-ratio: 3.09;
   transition: all 0.4s;
 }
-@media only screen and (min-width: 768px) {
+/*@media only screen and (min-width: 768px) {
   .logo {
     height: 60px;
   }
@@ -100,13 +102,13 @@ ul {
   padding: 0;
   list-style-type: none;
 }
-
 .menu-item {
   font-weight: bold;
   color: var(--cor-rubro);
   text-transform: uppercase;
   transition: all 0.4s;
 }
+
 @media only screen and (min-width: 768px) {
   .menu-item {
     padding: 15px;
@@ -137,33 +139,41 @@ ul {
 
 INICIO INFORMAÇÕES DO TOPO */
 #topo-info-container {
-  position: absolute;
   top: 100px;
   z-index: 1;
   justify-content: space-evenly;
   width: 100vw;
+  min-height: 102px; /*MUDAR PARA 100?*/
   font-family: Arial, Helvetica, sans-serif;
   color: var(--cor-clara);
 }
 @media only screen and (max-width: 600px) {
   #topo-info-container {
+    position: fixed;
     display: flex;
     flex-direction: column;
     padding: 16pt 20vw;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(25, 23, 23);
   }
-}
+}/*
 @media only screen and (min-width: 600px) {
   #topo-info-container {
+    position: relative;
+    align-items: center;
     display: grid;
     padding: 16pt 1vw;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(25, 23, 23);
   }
 }
 @media only screen and (min-width: 768px) {
   #topo-info-container {
+    position: absolute;
     display: flex;
-    height: calc((50vh - 100px) / 2);
+  }
+}
+@media only screen and (min-width: 992px) {
+  #topo-info-container {
+    height: calc((50vh - 50px) / 2);
     padding: 16pt 1vw;
     background-color: rgba(0, 0, 0, 0.6);
   }
@@ -173,12 +183,12 @@ INICIO INFORMAÇÕES DO TOPO */
     padding: 16pt 15vw;
   }
 }
-
-@media only screen and (max-width: 768px) {
+*/
+@media only screen and (max-width: 600px /*it's actually 768*/) {
   .info-wrapper {
     margin: 8pt 0;
   }
-}
+}/*
 
 @media only screen and (min-width: 600px) {
   #topo-info-container .info-wrapper:nth-child(1) {
@@ -198,13 +208,17 @@ INICIO INFORMAÇÕES DO TOPO */
     grid-row: 2;
   }
 }
-
+*/
 h2 {
   margin-bottom: 6pt;
-  font-size: 20pt;
   font-weight: normal;
   letter-spacing: 0.1em;
 }
+/*@media only screen and (min-width: 600px) {
+  h2 {
+    font-size: 20pt;
+  }
+}*/
 
 .horario-icon,
 .endereco-icon,
@@ -216,12 +230,10 @@ h2 {
 .endereco-icon:before,
 .telefone-icon:before {
   position: absolute;
-  top: -5px;
+  top: -3px;
   left: -38px;
-  display: inline-block;
   filter: invert(1) brightness(0.8);
 }
-
 .horario-icon:before {
   content: url("imagens/clock.svg");
   height: 28px;
@@ -240,6 +252,7 @@ h2 {
   width: 23px;
 }
 
+
 address {
   font-style: normal;
 }
@@ -247,7 +260,7 @@ address {
 .numero {
   color: var(--cor-clara);
 }
-
+/*
 @media only screen and (min-width: 1024px) {
   .numero:hover {
     color: white;
@@ -257,66 +270,144 @@ address {
 /* FIM INFORMAÇÕES DO TOPO
 
 INICIO SERVIÇOS */
+.parallax-container {
+  overflow: auto;
+}
 @media only screen and (max-width: 600px) {
-  #servicos-container,
-  #sobre-container,
-  #insta-container,
-  #inferior-info-container,
-  footer {
-    position: relative;
-    top: 422px;
+  .parallax-container {
+    height: calc(423px + (100vw / 1.75));
+  }
+}/*
+@media only screen and (min-width: 600px) {
+  .parallax-container {
+    height: calc(100vw / 1.5);
   }
 }
-@media only screen and (max-width: 768px) {
-  #servicos-container,
-  #sobre-container,
-  #insta-container,
-  #inferior-info-container,
-  footer {
-    position: relative;
-    top: 321px;
+@media only screen and (min-width: 768px) {
+  .parallax-container {
+    height: calc(1.14 * 100vw / 1.5);
   }
 }
-
+*/
+#servicos-container {
+  position: relative;
+}
+@media only screen and (max-width: 600px) {
+  #servicos-container {
+    top: 323px;
+  }
+}/*
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  #servicos-container {
+    top: 0;
+    height: 161vh;
+    overflow: scroll;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #servicos-container {
+    top: 121px;
+    height: 212vh;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #servicos-container {
+    top: 0;
+  }
+}
+*/
 .servico-um {
   background: url("imagens/massagem-terapeutica.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .servico-dois {
   background: url("imagens/liberacao-miofascial.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .servico-tres {
   background: url("imagens/pedras-quentes.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .servico-quatro {
   background: url("imagens/dry-needling.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
 .servico-cinco {
   background: url("imagens/ventosaterapia.jpg") no-repeat fixed;
-  background-size: cover;
-  background-position: 50% 50%;
 }
+@media only screen and (max-width: 600px) {
+  .servico-um,
+  .servico-dois,
+  .servico-tres,
+  .servico-quatro,
+  .servico-cinco {
+    position: relative;
+    top: 100px;
+    background-size: contain;
+    background-position: 50% 423px;
+  }
+}/*
+@media only screen and (min-width: 600px) {
+  .servico-um,
+  .servico-dois,
+  .servico-tres,
+  .servico-quatro,
+  .servico-cinco {
+    position: relative;
+    top: 100px;
+    background-size: contain;
+    background-position: 50% 321px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .servico-um,
+  .servico-dois,
+  .servico-tres,
+  .servico-quatro,
+  .servico-cinco {
+    background-position: 50% 223px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .servico-um,
+  .servico-dois,
+  .servico-tres,
+  .servico-quatro,
+  .servico-cinco {
+    background-position: 50% 50%;
+  }
+}*/
 
 .servico-superior {
   position: relative;
-  height: 50vh;
+  /*min-height: 235px;*/
   background-color: rgba(238, 242, 243, 0.45);
 }
+@media only screen and (max-width: 600px/*it'a actually 992*/) {
+  .servico-superior {
+    height: calc(100vw / 2.6);
+  }
+}/*
+@media only screen and (min-width: 992px) {
+  .servico-superior {
+    height: calc(50vh - 100px);
+  }
+}*/
 
 .servico-inferior {
-  height: 50vh;
+  position: relative;
+  /*min-height: 235px;*/
 }
+@media only screen and (max-width: 600px/*it'a actually 992*/) {
+  .servico-inferior {
+    height: calc(100vw / 2.6);
+  }
+}/*
+@media only screen and (min-width: 992px) {
+  .servico-inferior {
+    height: 50vh;
+  }
+}*/
 
 h1 {
   position: absolute;
@@ -324,80 +415,155 @@ h1 {
   left: 0;
   right: 0;
   transform: translate(0, -50%);
-  width: 550px;
   margin: auto;
   padding: 15px 0;
   border-top: 1px solid var(--cor-escura);
   border-bottom: 1px solid var(--cor-escura);
-  font-size: 22pt;
   color: var(--cor-rubro);
-  letter-spacing: 0.2em;
   line-height: 1.5em;
   text-align: center;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 600px) {
+  h1 {
+    margin: 0 15px;
+    font-size: 20pt;
+  }
+}
+/*@media only screen and (min-width: 600px) {
+  h1 {
+    width: 550px;
+    font-size: 22pt;
+    letter-spacing: 0.2em;
+  }
+}
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .servico-um:first-child h1 {
     top: auto;
-    bottom: calc((50% - 50px) / 2);
+    bottom: calc((50%) / 2);
     transform: translate(0, 50%);
   }
 }
 /* FIM SERVIÇOS
 
 INICIO SOBRE */
+/*@media only screen and (min-width: 1024px) {
+  #sobre-container,
+  #insta-container,
+  #inferior-info-container,
+  footer {
+    position: relative;
+    top: 0;
+  }
+}
+*/
 #sobre-container {
-  padding: 7em 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+@media only screen and (max-width: 600px/* it's actually 1024*/) {
+  #sobre-container {
+    padding: 7em 0 2em;
+  }
+}
+/*@media only screen and (min-width: 1024px) {
+  #sobre-container {
+    padding: 7em 0;
+  }
+}*/
 
 h3 {
   margin-bottom: 1em;
-  font-size: 18pt;
   color: var(--cor-rubro);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   text-align: center;
 }
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 16pt;
+  }
+}/*
+@media only screen and (min-width: 600px) {
+  h3 {
+    font-size: 18pt;
+  }
+}*/
 
 h4 {
   margin-bottom: 2em;
-  font-size: 16pt;
   color: var(--cor-escura);
   letter-spacing: 0.15em;
   text-align: center;
 }
-
-.sobre-wrapper {
-  display: flex;
-  justify-content: center;
+@media only screen and (max-width: 600px) {
+  h4 {
+    font-size: 14pt;
+  }
+}/*
+@media only screen and (min-width: 600px) {
+  h4 {
+    font-size: 16pt;
+  }
 }
 
+@media only screen and (min-width: 600px) {
+  .sobre-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}*/
+
 .sobre-wrapper p {
-  width: 360px;
-  margin: 0 1em;
-  font-size: 14pt;
   color: var(--cor-escura);
   line-height: 2em;
 }
+
+@media only screen and (max-width: 600px) {
+  .sobre-wrapper p {
+    margin: 1.5em;
+  }
+}/*
+@media only screen and (min-width: 600px) {
+  .sobre-wrapper p {
+    width: 360px;
+    margin: 0 2em;
+    font-size: 14pt;
+  }
+}
 /* FIM SOBRE
 
-INICIO PUBLICAÇÕES*/
+INICIO PUBLICAÇÕES */
 #insta-container {
-  padding: 7em 25%;
   background-color: var(--cor-clara);
+}
+@media only screen and (max-width: 600px/*it's actually 1024*/) {
+  #insta-container {
+    padding: 7em 1% 2em;
+  }
+}
+/*@media only screen and (min-width: 1024px) {
+  #insta-container {
+    padding: 7em 25%;
+  }
 }
 /* FIM PUBLICAÇÕES
 
-INICIO INFORMAÇÕES FINAIS*/
+INICIO INFORMAÇÕES FINAIS */
 #inferior-info-container {
   justify-content: space-evenly;
   background-color: var(--cor-rubro);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--cor-clara);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+  #inferior-info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4em 25vw;
+  }
+}/*
+@media only screen and (min-width: 600px) {
   #inferior-info-container {
     display: grid;
     padding: 4em 7vw;
@@ -413,9 +579,9 @@ INICIO INFORMAÇÕES FINAIS*/
   #inferior-info-container {
     padding: 4em 10vw;
   }
-}
+}*/
 
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
   #inferior-info-container .info-wrapper:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
@@ -435,20 +601,21 @@ INICIO INFORMAÇÕES FINAIS*/
 a:has(.mapa) {
   grid-column: 2;
   grid-row: 1 / span 2;
-}
+}*/
 
 .mapa {
+  margin-top: 8pt;
   height: 200px;
   border-radius: 15px;
   object-fit: cover;
   transition: all 0.4s;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 600px/*it's actually 992*/) {
   .mapa {
     width: 200px;
   }
 }
-@media only screen and (min-width: 992px) {
+/*@media only screen and (min-width: 992px) {
   .mapa {
     width: 350px;
   }
@@ -461,5 +628,4 @@ footer a {
   color: var(--cor-clara);
 }
 
-/* Ler best practices
-Passar hover pro desktop */
+/* Ler best practices */
