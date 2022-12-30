@@ -142,6 +142,7 @@ INICIO INFORMAÇÕES DO TOPO */
   z-index: 1;
   justify-content: space-evenly;
   width: 100vw;
+  min-height: 102px;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--cor-clara);
 }
@@ -320,6 +321,7 @@ INICIO SERVIÇOS */
 .servico-superior {
   position: relative;
   height: 50vh;
+  min-height: 300px;
   background-color: rgba(238, 242, 243, 0.45);
 }
 
