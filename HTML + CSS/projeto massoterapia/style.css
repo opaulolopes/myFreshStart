@@ -277,6 +277,7 @@ INICIO SERVIÇOS */
 .parallax-container {
   overflow: auto;
   height: 275px;
+  padding-top: 2em;
 }
 @media only screen and (max-width: 600px) {
   .parallax-container,
@@ -428,7 +429,7 @@ INICIO SERVIÇOS */
   }
 }*/
 
-h1 {
+h2 {
   position: absolute;
   top: 50%;
   left: 0;
@@ -444,13 +445,13 @@ h1 {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 600px) {
-  h1 {
+  h2 {
     margin: 0 15px;
     font-size: 18pt;
   }
 }
 /*@media only screen and (min-width: 600px) {
-  h1 {
+  h2 {
     width: 550px;
     font-size: 22pt;
     letter-spacing: 0.2em;
@@ -458,7 +459,7 @@ h1 {
 }
 
 @media only screen and (min-width: 992px) {
-  .servico-um:first-child h1 {
+  .servico-um:first-child h2 {
     top: auto;
     bottom: calc((50%) / 2);
     transform: translate(0, 50%);
@@ -493,7 +494,7 @@ INICIO SOBRE
   }
 }*/
 
-h2 {
+h1 {
   margin-bottom: 1em;
   color: var(--cor-rubro);
   letter-spacing: 0.25em;
@@ -501,12 +502,12 @@ h2 {
   text-align: center;
 }
 @media only screen and (max-width: 600px) {
-  h2 {
-    font-size: 16pt;
+  h1 {
+    font-size: 18pt;
   }
 }/*
 @media only screen and (min-width: 600px) {
-  h2 {
+  h1 {
     font-size: 18pt;
   }
 }*/
