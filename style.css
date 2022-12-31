@@ -9,7 +9,8 @@
 
 /* INICIO CONFIGURAÇÕES GERAIS */
 :root {
-  --cor-clara: rgba(238, 242, 243, 0.8);
+  --cor-clara-transparente: rgba(238, 242, 243, 0.8);
+  --cor-clara: rgb(238, 242, 243);
   --cor-roseada: rgb(255, 237, 238);
   --cor-rubro: rgb(164, 11, 26);
   --cor-escura: rgb(82, 81, 81);
@@ -47,7 +48,7 @@ header {
   z-index: 3;
   width: 100vw;
   height: 100px;
-  background-color: var(--cor-clara);
+  background-color: var(--cor-clara-transparente);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -447,7 +448,7 @@ h2 {
 @media only screen and (max-width: 600px) {
   h2 {
     margin: 0 15px;
-    font-size: 18pt;
+    font-size: 16pt;
   }
 }
 /*@media only screen and (min-width: 600px) {
@@ -497,13 +498,12 @@ INICIO SOBRE
 h1 {
   margin-bottom: 1em;
   color: var(--cor-rubro);
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  letter-spacing: 0.1em;
   text-align: center;
 }
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 18pt;
+    font-size: 20pt;
   }
 }/*
 @media only screen and (min-width: 600px) {
@@ -559,7 +559,7 @@ INICIO PUBLICAÇÕES */
 #insta-container {
   z-index: 2;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  background-color: rgb(238, 242, 243);;
+  background-color: var(--cor-clara);
 }
 @media only screen and (max-width: 600px/*it's actually 1024*/) {
   #insta-container {
