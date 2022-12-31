@@ -14,7 +14,6 @@
   --cor-roseada: rgb(255, 237, 238);
   --cor-rubro: rgb(164, 11, 26);
   --cor-escura: rgb(82, 81, 81);
-  --translacao-containers-mobile: 356px;
 }
 
 ::selection {
@@ -35,13 +34,13 @@ body {
   background-color: var(--cor-roseada);
   font-family: "Raleway", Arial, sans-serif;
   font-display: swap;
-  line-height: 1.5em;
-} /*
+  line-height: 2em;
+}
 @media only screen and (min-width: 1024px) {
   body {
     cursor: default;
   }
-}*/
+}
 
 header {
   position: fixed;
@@ -53,25 +52,25 @@ header {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
-@media only screen and (max-width: 768px/*it's actually 768*/) {
+@media only screen and (max-width: 767px) {
   /* DROPDOWN MENU */
   header {
     display: none;
   }
 }
-/*@media only screen and (min-width: 768px) {
-  /* DROPDOWN MENU 
+@media only screen and (min-width: 768px) {
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1%;
   }
-}*/
+}
 
 footer {
   padding-bottom: 10px;
   background-color: var(--cor-rubro);
+  font-size: 10pt;
   color: var(--cor-clara);
   letter-spacing: 0.1em;
   text-align: center;
@@ -83,16 +82,16 @@ a {
 /* FIM CONFIGURAÇÕES GERAIS
 
 INICIO MENU */
-/*.logo {
+.logo {
   aspect-ratio: 3.09;
   transition: all 0.4s;
 }
-/*@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .logo {
-    height: 60px;
+    height: 65px;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .logo {
     height: 80px;
   }
@@ -116,7 +115,7 @@ ul {
     padding: 15px;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .menu-item {
     padding: 20px;
     letter-spacing: 0.1em;
@@ -139,91 +138,226 @@ ul {
 }
 /* FIM MENU
 
+INICIO SERVIÇOS */
+.parallax-container,
+#topo-info-container,
+#sobre-container,
+#insta-container,
+#inferior-info-container,
+footer {
+  position: relative;
+  top: 100px;
+}
+
+.parallax-container {
+  overflow: auto;
+  height: calc(100vw / 1.5);
+  padding-top: 2.5em;
+}
+@media only screen and (max-width: 1023px) {
+  .parallax-container::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .parallax-container::-webkit-scrollbar-thumb {
+    background-color: var(--cor-rubro);
+    border-radius: 10px;
+  }
+
+  .parallax-container::-webkit-scrollbar-track {
+    background-color: var(--cor-roseada);
+    border-radius: 5px;
+  }
+}
+
+h1 {
+  margin-bottom: 1em;
+  color: var(--cor-rubro);
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 20pt;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 22pt;
+  }
+}
+
+.servico-um {
+  background: url("imagens/massagem-terapeutica.jpg") no-repeat fixed;
+}
+
+.servico-dois {
+  background: url("imagens/liberacao-miofascial.jpg") no-repeat fixed;
+}
+
+.servico-tres {
+  background: url("imagens/pedras-quentes.jpg") no-repeat fixed;
+}
+
+.servico-quatro {
+  background: url("imagens/dry-needling.jpg") no-repeat fixed;
+}
+
+.servico-cinco {
+  background: url("imagens/ventosaterapia.jpg") no-repeat fixed;
+}
+@media only screen and (max-width: 799px) {
+  .servico-um,
+  .servico-dois,
+  .servico-tres,
+  .servico-quatro,
+  .servico-cinco {
+    background-size: contain;
+    background-position: 50% 100px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .servico-um,
+  .servico-dois,
+  .servico-tres,
+  .servico-quatro,
+  .servico-cinco {
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
+
+.servico-superior {
+  position: relative;
+  background-color: rgba(238, 242, 243, 0.5);
+}
+@media only screen and (max-width: 1023px) {
+  .servico-superior {
+    height: calc(100vw / 3.5);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .servico-superior {
+    height: calc(50vh - 100px);
+  }
+}
+
+.servico-inferior {
+  position: relative;
+}
+@media only screen and (max-width: 1023px) {
+  .servico-inferior {
+    height: calc(100vw / 2.63);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .servico-inferior {
+    height: 50vh;
+  }
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  margin: auto;
+  padding: 10px 0;
+  border-top: 1px solid var(--cor-clara-transparente);
+  border-bottom: 1px solid var(--cor-clara-transparente);
+  color: var(--cor-rubro);
+  line-height: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  h2 {
+    margin: 0 2em;
+    font-size: 16pt;
+    letter-spacing: 2pt;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    margin: 0 7em;
+    font-size: 18pt;
+    letter-spacing: 0.2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  h2 {
+    margin: 0 13em;
+  }
+}
+/* FIM SERVIÇOS
+
 INICIO INFORMAÇÕES DO TOPO */
 #topo-info-container {
   top: 100px;
   z-index: 1;
-  /*justify-content: space-evenly;*/
   width: 100vw;
-  /*min-height: 102px;*/
   font-family: Arial, Helvetica, sans-serif;
   color: var(--cor-clara);
+  background-color: rgb(25, 23, 23);
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 639px) {
   #topo-info-container {
-    position: fixed;
-    padding: 12pt 20vw;
-    background-color: rgb(25, 23, 23);
+    padding: 40px 20vw;
   }
-} /*
-@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 640px) {
   #topo-info-container {
-    position: relative;
-    align-items: center;
     display: grid;
-    padding: 16pt 1vw;
-    background-color: rgb(25, 23, 23);
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding: 40px 1vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #topo-info-container {
-    position: absolute;
     display: flex;
   }
 }
-@media only screen and (min-width: 992px) {
-  #topo-info-container {
-    height: calc((50vh - 50px) / 2);
-    padding: 16pt 1vw;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #topo-info-container {
-    padding: 16pt 15vw;
-  }
-}*/
 
-@media only screen and (max-width: 600px/*it's actually 768px*/) {
-  .info-wrapper:not(.info-wrapper:nth-child(1)) {
-    margin-top: 6pt;
-  }
+.info-wrapper {
+  margin: 18pt 0;
 }
 
-/*@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) and (max-width: 767px) {
   #topo-info-container .info-wrapper:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) and (max-width: 767px) {
   #topo-info-container .info-wrapper:nth-child(2) {
     grid-column: 2;
     grid-row: 1;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) and (max-width: 767px) {
   #topo-info-container .info-wrapper:nth-child(3) {
-    grid-column: 1 / span 2;
+    grid-column: 2;
     grid-row: 2;
   }
-}*/
+}
 
 h4 {
-  margin-bottom: 4pt;
+  margin-bottom: 8pt;
   font-weight: normal;
   letter-spacing: 0.1em;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   h4 {
     font-size: 15pt;
   }
 }
-/*@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   h4 {
-    font-size: 20pt;
+    font-size: 16pt;
   }
-}*/
+}
 
 .horario-icon,
 .endereco-icon,
@@ -265,7 +399,6 @@ address {
 .numero {
   color: var(--cor-clara);
 }
-/*
 @media only screen and (min-width: 1024px) {
   .numero:hover {
     color: white;
@@ -274,243 +407,12 @@ address {
 }
 /* FIM INFORMAÇÕES DO TOPO
 
-INICIO SERVIÇOS */
-.parallax-container {
-  overflow: auto;
-  height: 275px;
-  padding-top: 2em;
-}
-@media only screen and (max-width: 600px) {
-  .parallax-container,
-  #sobre-container,
-  #insta-container,
-  #inferior-info-container,
-  footer {
-    position: relative;
-    top: var(--translacao-containers-mobile);
-  }
-
-  .parallax-container::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  .parallax-container::-webkit-scrollbar-thumb {
-    background-color: var(--cor-rubro);
-    border-radius: 10px;
-  }
-
-  .parallax-container::-webkit-scrollbar-track {
-    background-color: var(--cor-roseada);
-    border-radius: 5px;
-  }
-} /*
-@media only screen and (min-width: 600px) {
-  .parallax-container {
-    height: calc(100vw / 1.5);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .parallax-container {
-    height: calc(1.14 * 100vw / 1.5);
-  }
-}*/
-
-@media only screen and (max-width: 600px) {
-  #servicos-container {
-    /*height: calc(425px + (100vw / 1.75));*/
-  }
-} /*
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-  #servicos-container {
-    top: 0;
-    height: 161vh;
-    overflow: scroll;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #servicos-container {
-    top: 121px;
-    height: 212vh;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #servicos-container {
-    top: 0;
-  }
-}*/
-
-.servico-um {
-  background: url("imagens/massagem-terapeutica.jpg") no-repeat fixed;
-}
-
-.servico-dois {
-  background: url("imagens/liberacao-miofascial.jpg") no-repeat fixed;
-}
-
-.servico-tres {
-  background: url("imagens/pedras-quentes.jpg") no-repeat fixed;
-}
-
-.servico-quatro {
-  background: url("imagens/dry-needling.jpg") no-repeat fixed;
-}
-
-.servico-cinco {
-  background: url("imagens/ventosaterapia.jpg") no-repeat fixed;
-}
-@media only screen and (max-width: 600px) {
-  .servico-um,
-  .servico-dois,
-  .servico-tres,
-  .servico-quatro,
-  .servico-cinco {
-    background-size: contain;
-    background-position: 50% var(--translacao-containers-mobile);
-  }
-} /*
-@media only screen and (min-width: 600px) {
-  .servico-um,
-  .servico-dois,
-  .servico-tres,
-  .servico-quatro,
-  .servico-cinco {
-    position: relative;
-    top: 100px;
-    background-size: contain;
-    background-position: 50% 321px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .servico-um,
-  .servico-dois,
-  .servico-tres,
-  .servico-quatro,
-  .servico-cinco {
-    background-position: 50% 223px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .servico-um,
-  .servico-dois,
-  .servico-tres,
-  .servico-quatro,
-  .servico-cinco {
-    background-position: 50% 50%;
-  }
-}*/
-
-.servico-superior {
-  position: relative;
-  /*min-height: 235px;*/
-  background-color: rgba(238, 242, 243, 0.45);
-}
-@media only screen and (max-width: 600px/*it'a actually 992*/) {
-  .servico-superior {
-    height: calc(100vw / 3);
-  }
-} /*
-@media only screen and (min-width: 992px) {
-  .servico-superior {
-    height: calc(50vh - 100px);
-  }
-}*/
-
-.servico-inferior {
-  position: relative;
-  /*min-height: 235px;*/
-}
-@media only screen and (max-width: 600px/*it'a actually 992*/) {
-  .servico-inferior {
-    height: calc(100vw / 3);
-  }
-} /*
-@media only screen and (min-width: 992px) {
-  .servico-inferior {
-    height: 50vh;
-  }
-}*/
-
-h2 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translate(0, -50%);
-  margin: auto;
-  padding: 10px 0;
-  border-top: 1px solid var(--cor-escura);
-  border-bottom: 1px solid var(--cor-escura);
-  color: var(--cor-rubro);
-  line-height: 1.5em;
-  text-align: center;
-  text-transform: uppercase;
-}
-@media only screen and (max-width: 600px) {
-  h2 {
-    margin: 0 15px;
-    font-size: 16pt;
-  }
-}
-/*@media only screen and (min-width: 600px) {
-  h2 {
-    width: 550px;
-    font-size: 22pt;
-    letter-spacing: 0.2em;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .servico-um:first-child h2 {
-    top: auto;
-    bottom: calc((50%) / 2);
-    transform: translate(0, 50%);
-  }
-}
-/* FIM SERVIÇOS
-
-INICIO SOBRE 
-/*@media only screen and (min-width: 1024px) {
-  #sobre-container,
-  #insta-container,
-  #inferior-info-container,
-  footer {
-    position: relative;
-    top: 0;
-  }
-}*/
-
+INICIO SOBRE */
 #sobre-container {
-  z-index: 2;
+  padding: 7em 0 2em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   background-color: var(--cor-roseada);
 }
-@media only screen and (max-width: 600px/* it's actually 1024*/) {
-  #sobre-container {
-    padding: 7em 0 2em;
-  }
-}
-/*@media only screen and (min-width: 1024px) {
-  #sobre-container {
-    padding: 7em 0;
-  }
-}*/
-
-h1 {
-  margin-bottom: 1em;
-  color: var(--cor-rubro);
-  letter-spacing: 0.1em;
-  text-align: center;
-}
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 20pt;
-  }
-}/*
-@media only screen and (min-width: 600px) {
-  h1 {
-    font-size: 18pt;
-  }
-}*/
 
 h3 {
   margin-bottom: 2em;
@@ -518,37 +420,32 @@ h3 {
   letter-spacing: 0.15em;
   text-align: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   h3 {
     font-size: 15pt;
   }
-}/*
-@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 768px) {
   h3 {
     font-size: 16pt;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 720px) {
   .sobre-wrapper {
     display: flex;
     justify-content: center;
   }
-}*/
-
-.sobre-wrapper p {
-  color: var(--cor-escura);
-  line-height: 2em;
 }
 
-@media only screen and (max-width: 600px) {
+.sobre-wrapper p {
+  margin: 1.5em;
+  color: var(--cor-escura);
+}
+
+@media only screen and (min-width: 768px) {
   .sobre-wrapper p {
-    margin: 1.5em;
-  }
-}/*
-@media only screen and (min-width: 600px) {
-  .sobre-wrapper p {
-    width: 360px;
+    width: 340px;
     margin: 0 2em;
     font-size: 14pt;
   }
@@ -557,92 +454,80 @@ h3 {
 
 INICIO PUBLICAÇÕES */
 #insta-container {
-  z-index: 2;
+  padding: 7em 0 2em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   background-color: var(--cor-clara);
-}
-@media only screen and (max-width: 600px/*it's actually 1024*/) {
-  #insta-container {
-    padding: 7em 1% 2em;
-  }
-}
-/*@media only screen and (min-width: 1024px) {
-  #insta-container {
-    padding: 7em 25%;
-  }
 }
 /* FIM PUBLICAÇÕES
 
 INICIO INFORMAÇÕES FINAIS */
 #inferior-info-container {
-  z-index: 2;
-  /*justify-content: space-evenly;*/
   background-color: var(--cor-rubro);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--cor-clara);
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 639px) {
   #inferior-info-container {
-    /*display: flex;
-    flex-direction: column;*/
     padding: 2em 25vw;
   }
-}/*
-@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 640px) {
   #inferior-info-container {
     display: grid;
+    align-items: center;
+    justify-content: space-evenly;
     padding: 4em 7vw;
   }
 }
 @media only screen and (min-width: 768px) {
   #inferior-info-container {
     display: flex;
-    padding: 4em 0vw;
+    align-items: flex-start;
+    padding: 4em 0;
   }
 }
-@media only screen and (min-width: 1200px) {
-  #inferior-info-container {
-    padding: 4em 10vw;
-  }
-}*/
 
-#inferior-info-container .info-wrapper {
-  margin: 12pt 0;
-}
-
-/*@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 640px) and (max-width: 768px) {
   #inferior-info-container .info-wrapper:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 640px) and (max-width: 768px) {
   #inferior-info-container .info-wrapper:nth-child(2) {
     grid-column: 1;
     grid-row: 2;
   }
 }
 
+#inferior-info-container .endereco-icon:before,
+#inferior-info-container .telefone-icon:before {
+  top: 0px;
+  left: -30px;
+  height: 18px;
+  width: 18px;
+}
+
 a:has(.mapa) {
   grid-column: 2;
   grid-row: 1 / span 2;
-}*/
+}
 
 .mapa {
-  margin-top: 8pt;
+  margin-top: 18pt;
   height: 200px;
-  border-radius: 15px;
+  border-radius: 7px;
   object-fit: cover;
   transition: all 0.4s;
 }
-@media only screen and (max-width: 600px/*it's actually 992*/) {
+@media only screen and (max-width: 1023px) {
   .mapa {
     width: 200px;
   }
-}/*
-/*@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1024px) {
   .mapa {
-    width: 350px;
+    width: 400px;
   }
 }
 
