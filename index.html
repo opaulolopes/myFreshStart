@@ -13,8 +13,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bf0b1a">
   <link rel="stylesheet" href="style.css">
-  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </head>
 
 <body>
@@ -116,7 +114,9 @@
       </div>
     </div>
     <div id="insta-container">
-      <div class="elfsight-app-6673091a-23a0-4e4a-bd5b-8c1642fd9221"></div>
+      <h1>Siga Tatyanne Massoterapeuta</h1>
+      <a class="instagram-icon" rel="noopener" href="https://www.instagram.com/tatyanne.massoterapeuta/" target="_blank"
+        title="Visitar o Instagram"></a>
     </div>
     <div id="inferior-info-container">
       <div class="info-wrapper">
@@ -132,7 +132,29 @@
       <a href="https://goo.gl/maps/sX24mMGdGmutFA2L8"><img class="mapa" src="imagens/mapa.jpg"
           alt="Mapa com direções até o local"></a>
     </div>
-    <div class="elfsight-app-7fdad4de-764b-4540-a05b-e4ef8dc521d9"></div>
+    <div onclick="Clicar()" class="chat-widget"></div>
+    <div id="clicar" class="chat-container">
+      <div class="chat-header">
+        <div class="chat-foto"><img src="imagens/chat.jpg" alt="Foto de perfil Tatyanne Massoterapeuta"></div>
+        <div class="chat-nome">
+          <h5>Tatyanne Silva</h5>
+          <h6>Normalmente responde em até 1 hora</h6>
+        </div>
+      </div>
+      <div class="chat-main">
+        <div id="typing" class="chat-loader-wrapper">
+          <div class="chat-loader"></div>
+        </div>
+        <div id="message" class="chat-mensagem-wrapper">
+          <h5>Taty</h5>
+          <p>Oi, tudo bem? 👋<br><br>Eu sou a Taty, estou aqui para te ajudar. Vamos conversar?</p>
+          <p id="date-time" class="chat-hora"></p>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <a href="https://wa.me/556299170908" rel="noopener" title="Iniciar conversa" target="_blank">Enviar</a>
+      </div>
+    </div>
   </main>
   <footer>
     <p>
@@ -141,6 +163,7 @@
           title="Visitar o portfólio do desenvolvedor">Paulo Lopes</a></strong>
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
