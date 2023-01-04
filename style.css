@@ -7,7 +7,6 @@
       format("truetype");
 }
 
-/* INICIO CONFIGURAÇÕES GERAIS */
 :root {
   --cor-clara: rgb(238, 242, 243);
   --cor-roseada: rgb(255, 237, 238);
@@ -76,9 +75,7 @@ a {
   color: var(--cor-clara);
   text-decoration: none;
 }
-/* FIM CONFIGURAÇÕES GERAIS
 
-INICIO MENU */
 .logo {
   aspect-ratio: 3.09;
   transition: all 0.4s;
@@ -130,7 +127,6 @@ ul {
   filter: grayscale(7);
 }
 
-/* Mobile menu */
 @media only screen and (min-width: 768px) {
   input[type="checkbox"],
   .linhas-menu {
@@ -240,9 +236,7 @@ ul {
     left: 27px;
   }
 }
-/* FIM MENU
 
-INICIO SERVIÇOS */
 .parallax-container {
   overflow: auto;
   height: calc(100vw / 1.5);
@@ -267,14 +261,18 @@ INICIO SERVIÇOS */
   padding-top: 2.5em;
 }
 
-h1 {
+#servicos-container h1,
+#sobre-container h1,
+#insta-container h1 {
   margin-bottom: 1em;
   color: var(--cor-rubro);
   letter-spacing: 0.15em;
   text-align: center;
 }
 @media only screen and (max-width: 767px) {
-  h1 {
+  #servicos-container h1,
+  #sobre-container h1,
+  #insta-container h1 {
     font-size: 22pt;
   }
 }
@@ -323,7 +321,7 @@ h1 {
   position: relative;
   background-color: rgba(238, 242, 243, 0.5);
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 799px) {
   .servico-superior {
     height: calc(100vw / 3.5);
   }
@@ -348,7 +346,7 @@ h1 {
   }
 }
 
-.servico-superior h2 {
+#servicos-container h2 {
   position: absolute;
   top: 50%;
   left: 0;
@@ -364,26 +362,24 @@ h1 {
   text-transform: uppercase;
 }
 @media only screen and (max-width: 767px) {
-  h2 {
+  #servicos-container h2 {
     margin: 0 2em;
     font-size: 16pt;
     letter-spacing: 2pt;
   }
 }
 @media only screen and (min-width: 768px) {
-  h2 {
+  #servicos-container h2 {
     margin: 0 7em;
     letter-spacing: 0.2em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  h2 {
+  #servicos-container h2 {
     margin: 0 13em;
   }
 }
-/* FIM SERVIÇOS
 
-INICIO INFORMAÇÕES DO TOPO */
 #topo-info-container {
   top: 100px;
   width: 100vw;
@@ -429,18 +425,18 @@ INICIO INFORMAÇÕES DO TOPO */
   }
 }
 
-h4 {
+.info-wrapper h1 {
   margin: 18pt 0 8pt;
   font-weight: normal;
   letter-spacing: 0.1em;
 }
 @media only screen and (max-width: 767px) {
-  h4 {
+  .info-wrapper h1 {
     font-size: 15pt;
   }
 }
 @media only screen and (min-width: 768px) {
-  h4 {
+  .info-wrapper h1 {
     font-size: 16pt;
   }
 }
@@ -487,28 +483,26 @@ address {
   color: white;
   font-weight: bold;
 }
-/* FIM INFORMAÇÕES DO TOPO
 
-INICIO SOBRE */
 #sobre-container {
   padding: 3em 0 2em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   background-color: var(--cor-roseada);
 }
 
-h3 {
+#sobre-container h2 {
   margin-bottom: 2em;
   color: var(--cor-escura);
   letter-spacing: 0.15em;
   text-align: center;
 }
 @media only screen and (max-width: 767px) {
-  h3 {
+  #sobre-container h2 {
     font-size: 15pt;
   }
 }
 @media only screen and (min-width: 768px) {
-  h3 {
+  #sobre-container h2 {
     font-size: 16pt;
   }
 }
@@ -533,16 +527,14 @@ h3 {
     font-size: 14pt;
   }
 }
-/* FIM SOBRE
 
-INICIO PUBLICAÇÕES */
 #insta-container {
   padding: 3em 0 2em;
   background-image: linear-gradient(var(--cor-roseada), var(--cor-rubro));
 }
 
 #insta-container h1 {
-  color: var(--cor-clara)
+  color: var(--cor-clara);
 }
 
 .instagram-icon {
@@ -556,9 +548,7 @@ INICIO PUBLICAÇÕES */
   padding: 5px;
   filter: invert(0.95);
 }
-/* FIM PUBLICAÇÕES
 
-INICIO INFORMAÇÕES FINAIS */
 #inferior-info-container {
   background-color: var(--cor-rubro);
   font-family: Arial, Helvetica, sans-serif;
@@ -632,9 +622,6 @@ INICIO INFORMAÇÕES FINAIS */
   }
 }
 
-/* FIM INFORMAÇÕES FINAIS
-
-INÍCIO CHAT */
 .chat-widget::before {
   content: "";
   position: absolute;
@@ -852,5 +839,3 @@ INÍCIO CHAT */
       24px 0px 0px 0px rgba(0, 0, 0, 0.2);
   }
 }
-/* FIM CHAT
-Ler best practices*/
